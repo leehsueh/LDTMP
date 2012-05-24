@@ -75,7 +75,8 @@ public class CalibratedNodeJoint : MonoBehaviour {
 	}
 	
 	public void resetToBasePosition() {
-		gameObject.transform.localPosition = basePosition;	
+		gameObject.transform.localPosition = basePosition;
+		initialPosition = Vector3.zero;
 	}
 }
 

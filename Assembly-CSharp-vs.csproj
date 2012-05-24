@@ -67,6 +67,7 @@
      <Compile Include="Assets\Kinect\PlayerManager.cs" />
      <Compile Include="Assets\Labels\LabelFlash.cs" />
      <Compile Include="Assets\MainMenu\GenerateMenu.cs" />
+     <Compile Include="Assets\MainMenu\ReturnToMainMenu.cs" />
      <Compile Include="Assets\Player\Gestures\GestureRecognizer.cs" />
      <Compile Include="Assets\Player\Gestures\HandRaisedRecognizer.cs" />
      <Compile Include="Assets\Player\PlayerStatusController.cs" />

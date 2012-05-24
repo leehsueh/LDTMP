@@ -78,6 +78,7 @@ public class CalibratedNodeRoot : MonoBehaviour {
 			if (!playerSet) {
 				playerID = player.PlayerID;
 				playerSet = true;
+				recalibrate();
 			} else {
 				
 			}
@@ -159,8 +160,8 @@ public class CalibratedNodeRoot : MonoBehaviour {
 		}
 		Vector3 resultPos = basePosition + incrementalPosition;
 		if (gameManager != null) {
-			if (resultPos.x > 0) resultPos.x = Mathf.Min(resultPos.x, gameManager.GetComponent<FallingObjectGameStatus>().rightBound);
-			else if (resultPos.x < 0) resultPos.x = Mathf.Max(resultPos.x, gameManager.GetComponent<FallingObjectGameStatus>().leftBound);
+			//if (resultPos.x > 0) resultPos.x = Mathf.Min(resultPos.x, gameManager.GetComponent<FallingObjectGameStatus>().rightBound);
+			//else if (resultPos.x < 0) resultPos.x = Mathf.Max(resultPos.x, gameManager.GetComponent<FallingObjectGameStatus>().leftBound);
 		}
 		gameObject.transform.position = resultPos;
 	}
