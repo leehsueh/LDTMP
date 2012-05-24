@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{BCF05F5C-ABCE-9D13-6778-FEE83824BE36}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_3_5_0;UNITY_3_5;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_WIN;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_WEBCAM;ENABLE_MICROPHONE;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW;ENABLE_SUBSTANCE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Components\DebugSkeletonNodeJoint.cs" />
+     <Compile Include="Assets\Components\DebugSkeletonNodeRoot.cs" />
+     <Compile Include="Assets\Components\DepthImage.cs" />
+     <Compile Include="Assets\Components\FPS.cs" />
+     <Compile Include="Assets\Components\GuiDepthImage.cs" />
+     <Compile Include="Assets\Components\GuiRawImage.cs" />
+     <Compile Include="Assets\Components\PlayerEnrollmentText.cs" />
+     <Compile Include="Assets\Components\RawImage.cs" />
+     <Compile Include="Assets\Components\RightHand.cs" />
+     <Compile Include="Assets\FallingObject\ExplosionEffectAutodestruct.cs" />
+     <Compile Include="Assets\FallingObject\FallingObjectController.cs" />
+     <Compile Include="Assets\FallingObject\FallingObjectSpawner.cs" />
+     <Compile Include="Assets\FallingObjectKinect Scripts\FallingObjectGameStatus.cs" />
+     <Compile Include="Assets\FallingObjectKinect Scripts\FallingObjectKinectController.cs" />
+     <Compile Include="Assets\FallingObjectKinect Scripts\FallingObjectPlayerMovement.cs" />
+     <Compile Include="Assets\Kinect\CustomPlayerManager.cs" />
+     <Compile Include="Assets\Kinect\HResult.cs" />
+     <Compile Include="Assets\Kinect\KinectFilter.cs" />
+     <Compile Include="Assets\Kinect\KinectInterface.cs" />
+     <Compile Include="Assets\Kinect\KinectManager.cs" />
+     <Compile Include="Assets\Kinect\PlayerManager.cs" />
+     <Compile Include="Assets\Labels\LabelFlash.cs" />
+     <Compile Include="Assets\MainMenu\GenerateMenu.cs" />
+     <Compile Include="Assets\Player\Gestures\GestureRecognizer.cs" />
+     <Compile Include="Assets\Player\Gestures\HandRaisedRecognizer.cs" />
+     <Compile Include="Assets\Player\PlayerStatusController.cs" />
+     <Compile Include="Assets\Player\Skeleton\CalibratedNodeJoint.cs" />
+     <Compile Include="Assets\Player\Skeleton\CalibratedNodeRoot.cs" />
+     <Compile Include="Assets\Player\Skeleton\HandModelController.cs" />
+     <Compile Include="Assets\Player\Skeleton\JointSegment.cs" />
+     <Compile Include="Assets\StaticPlayer\PlayerMovementController.cs" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{3BF249EA-64BF-409E-E69F-299ADB0C6DEF}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{34F18C98-EB3F-7831-B139-B56D402435CC}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

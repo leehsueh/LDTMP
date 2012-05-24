@@ -1,0 +1,2382 @@
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvd3dum.dll 8.17.12.9610]
+    Renderer: NVIDIA GeForce 8400M GS   
+    Vendor:   NVIDIA
+    VRAM:     113 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 DF24=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
+desktop: 1280x800 60Hz; virtual: 2304x800 at -1024,0
+<I> Initializing (RawInput).
+<RI> Input initialized.
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\TeachHello_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\TeachHello_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\TeachHello_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\TeachHello_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\TeachHello_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\TeachHello_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\TeachHello_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\TeachHello_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+- Completed reload, in  0.093 seconds
+NullReferenceException: Object reference not set to an instance of an object
+  at KinectManager.Start () [0x000b1] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\KinectManager.cs:83 
+ 
+(Filename: C Line: 0)
+
+Exception: No frame data available
+  at HRESULT.ThrowOnFailure (HRESULT hresult) [0x0014e] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\HResult.cs:300 
+  at KinectManager.GetSkeletons () [0x00000] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\KinectManager.cs:183 
+  at KinectManager.Update () [0x0001c] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\KinectManager.cs:95 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerStatusController.OnGUI () [0x00006] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\PlayerStatusController.cs:153 
+ 
+(Filename: C Line: 0)
+

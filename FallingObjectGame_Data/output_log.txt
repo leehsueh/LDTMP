@@ -1,0 +1,119 @@
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvd3dum.dll 8.17.13.142]
+    Renderer: NVIDIA GeForce 8400M GS   
+    Vendor:   NVIDIA
+    VRAM:     113 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 DF24=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
+desktop: 1280x800 60Hz; virtual: 1280x800 at 0,0
+<I> Initializing (RawInput).
+<RI> Input initialized.
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\FallingObjectGame_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\FallingObjectGame_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\FallingObjectGame_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\FallingObjectGame_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\FallingObjectGame_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\FallingObjectGame_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\FallingObjectGame_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\FallingObjectGame_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+- Completed reload, in  0.093 seconds
+NullReferenceException: Object reference not set to an instance of an object
+  at KinectManager.Start () [0x000b1] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\KinectManager.cs:83 
+ 
+(Filename: C Line: 0)
+
+Exception: No frame data available
+  at HRESULT.ThrowOnFailure (HRESULT hresult) [0x0014e] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\HResult.cs:300 
+  at KinectManager.GetSkeletons () [0x00000] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\KinectManager.cs:183 
+  at KinectManager.Update () [0x0001c] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\KinectManager.cs:95 
+ 
+(Filename: C Line: 0)
+
+Exception: No frame data available
+  at HRESULT.ThrowOnFailure (HRESULT hresult) [0x0014e] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\HResult.cs:300 
+  at KinectManager.GetDepthStream () [0x00000] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\KinectManager.cs:169 
+  at KinectManager.Update () [0x00029] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\KinectManager.cs:97 
+ 
+(Filename: C Line: 0)
+
+Calibration done!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+CalibratedNodeRoot:jointCalibrated(GameObject) (at C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\Skeleton\CalibratedNodeRoot.cs:139)
+CalibratedNodeJoint:Update() (at C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\Skeleton\CalibratedNodeJoint.cs:59)
+ 
+(Filename: C Line: 0)
+
+Exception: No frame data available
+  at HRESULT.ThrowOnFailure (HRESULT hresult) [0x0014e] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\HResult.cs:300 
+  at KinectManager.GetDepthStream () [0x00000] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\KinectManager.cs:169 
+  at KinectManager.Update () [0x00029] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\KinectManager.cs:97 
+ 
+(Filename: C Line: 0)
+
+Lost player 1!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+CustomPlayerManager:UpdatePlayerState() (at C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\CustomPlayerManager.cs:258)
+CustomPlayerManager:Update() (at C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\CustomPlayerManager.cs:290)
+ 
+(Filename: C Line: 0)
+
+Lost player 2!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+CustomPlayerManager:UpdatePlayerState() (at C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\CustomPlayerManager.cs:262)
+CustomPlayerManager:Update() (at C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\CustomPlayerManager.cs:290)
+ 
+(Filename: C Line: 0)
+
+Lost player 1!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+CustomPlayerManager:UpdatePlayerState() (at C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\CustomPlayerManager.cs:258)
+CustomPlayerManager:Update() (at C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\CustomPlayerManager.cs:290)
+ 
+(Filename: C Line: 0)
+
+Lost player 2!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+CustomPlayerManager:UpdatePlayerState() (at C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\CustomPlayerManager.cs:262)
+CustomPlayerManager:Update() (at C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\CustomPlayerManager.cs:290)
+ 
+(Filename: C Line: 0)
+
+Exception: No frame data available
+  at HRESULT.ThrowOnFailure (HRESULT hresult) [0x0014e] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\HResult.cs:300 
+  at KinectManager.GetDepthStream () [0x00000] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\KinectManager.cs:169 
+  at KinectManager.Update () [0x00029] in C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\KinectManager.cs:97 
+ 
+(Filename: C Line: 0)
+
+Lost player 1!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+CustomPlayerManager:UpdatePlayerState() (at C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\CustomPlayerManager.cs:258)
+CustomPlayerManager:Update() (at C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\CustomPlayerManager.cs:290)
+ 
+(Filename: C Line: 0)
+
+Lost player 2!
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+UnityEngine.MonoBehaviour:print(Object)
+CustomPlayerManager:UpdatePlayerState() (at C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\CustomPlayerManager.cs:262)
+CustomPlayerManager:Update() (at C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Kinect\CustomPlayerManager.cs:290)
+ 
+(Filename: C Line: 0)
+
+Waiting for finish
+Waiting for finish
+Waiting for finish
