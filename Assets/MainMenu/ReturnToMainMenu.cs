@@ -105,8 +105,7 @@ public class ReturnToMainMenu : MonoBehaviour {
 	}
 	
 	void OnGUI() {
-		GUI.Box (new Rect (100,100,400,50), "Raise Both Hands to Go Back");
-		string statusMessage = "<nothing>";
+		string statusMessage = "Raise Both Hands to Go Back";
 		// show status message based on the state
 		switch (CurrentState) {
 		case MenuState.WaitForPresence:
@@ -122,12 +121,11 @@ public class ReturnToMainMenu : MonoBehaviour {
 			statusMessage = "Returning to Main Menu...";
 			break;
 		}
-		int labelWidth = 500;
-		int labelHeight = 100;
 		GUIStyle style = new GUIStyle();
-		style.fontSize = 24;
-		style.alignment = TextAnchor.MiddleCenter;
-		style.normal.textColor = Color.black;
-		GUI.Label(new Rect(Screen.width/2 - labelWidth/2, 100, labelWidth, labelHeight), statusMessage, style);
+//		style.fontSize = 24;
+//		style.alignment = TextAnchor.MiddleCenter;
+//		style.normal.textColor = Color.black;
+		//GUI.Label(new Rect(Screen.width/2 - labelWidth/2, 100, labelWidth, labelHeight), statusMessage, style);
+		GUI.Box (new Rect (100,100,300,50), statusMessage);
 	}
 }

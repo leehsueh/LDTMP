@@ -1,26 +1,11 @@
 using UnityEngine;
 using System.Collections;
 
-public class WavingGameManager : MonoBehaviour {
-	public GameObject groundObject;
-	public GameObject mainCameraObject;
-	
-	public GameObject ground {
-		get { return groundObject; }
-	}
-	
-	public GameObject mainCamera {
-		get { return mainCameraObject; }
-	}
-	
+public class WavingGameManager : MotionSandboxManager {
+
 	// Use this for initialization
 	void Start () {
-		if (groundObject == null) {
-			groundObject = GameObject.Find("Ground");
-		}
-		if (mainCameraObject == null) {
-			mainCameraObject = GameObject.Find("Main Camera");
-		}
+		base.Start();
 	}
 	
 	// Update is called once per frame

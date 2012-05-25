@@ -67,6 +67,7 @@
      <Compile Include="Assets\Kinect\PlayerManager.cs" />
      <Compile Include="Assets\Labels\LabelFlash.cs" />
      <Compile Include="Assets\MainMenu\GenerateMenu.cs" />
+     <Compile Include="Assets\MainMenu\PlayerStatusDisplay.cs" />
      <Compile Include="Assets\MainMenu\ReturnToMainMenu.cs" />
      <Compile Include="Assets\Player\Gestures\GestureRecognizer.cs" />
      <Compile Include="Assets\Player\Gestures\HandRaisedRecognizer.cs" />
@@ -76,7 +77,9 @@
      <Compile Include="Assets\Player\Skeleton\HandModelController.cs" />
      <Compile Include="Assets\Player\Skeleton\JointSegment.cs" />
      <Compile Include="Assets\StaticPlayer\PlayerMovementController.cs" />
+     <Compile Include="Assets\WavingGame\MotionSandboxManager.cs" />
      <Compile Include="Assets\WavingGame\WalkingCharacterController.cs" />
+     <Compile Include="Assets\WavingGame\WavingGameCharacterController.cs" />
      <Compile Include="Assets\WavingGame\WavingGameManager.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
   </ItemGroup>

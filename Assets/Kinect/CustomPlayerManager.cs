@@ -203,6 +203,20 @@ public class CustomPlayerManager : MonoBehaviour
 		return RightHand.Y > HeadPos.Y || LeftHand.Y > HeadPos.Y;
 	}
 	
+	bool TPose(KinectInterface.NUI_SKELETON_DATA Data)
+	{
+		float tolerance = 0.2f;
+		KinectInterface.Vector4 LeftShoulder = Data.SkeletonPositions[(int)KinectInterface.NUI_SKELETON_POSITION_INDEX.NUI_SKELETON_POSITION_SHOULDER_LEFT];
+		KinectInterface.Vector4 RightShoulder = Data.SkeletonPositions[(int)KinectInterface.NUI_SKELETON_POSITION_INDEX.NUI_SKELETON_POSITION_SHOULDER_RIGHT];
+		KinectInterface.Vector4 RightHand = Data.SkeletonPositions[(int)KinectInterface.NUI_SKELETON_POSITION_INDEX.NUI_SKELETON_POSITION_HAND_RIGHT];
+		KinectInterface.Vector4 LeftHand = Data.SkeletonPositions[(int)KinectInterface.NUI_SKELETON_POSITION_INDEX.NUI_SKELETON_POSITION_HAND_LEFT];
+		
+		bool LeftAligned = Mathf.Abs(LeftShoulder.Y - LeftHand.Y) <= tolerance;
+		bool RightAligned = Mathf.Abs(RightShoulder.Y - RightHand.Y) <= tolerance;
+	
+		return LeftAligned && RightAligned;
+	}
+	
 	/// <summary>
 	/// Check to see if a player's hand is raised, updating their enrollment state accordingly
 	/// </summary>
@@ -213,7 +227,8 @@ public class CustomPlayerManager : MonoBehaviour
 	{
 		if(SkeletonInView(ref Player))
 		{
-			if(HandRaised(Manager.frameData.SkeletonData[Player.SkeletonID]))
+			if(TPose(Manager.frameData.SkeletonData[Player.SkeletonID]))
+			//if(HandRaised(Manager.frameData.SkeletonData[Player.SkeletonID]))
 			{
 				Player.EnrollmentState = PlayerEnrollmentState.Enrolled;
 			}
