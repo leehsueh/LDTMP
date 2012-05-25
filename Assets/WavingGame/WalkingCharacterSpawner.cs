@@ -63,7 +63,7 @@ public class WalkingCharacterSpawner : MonoBehaviour {
 		if (rangeZOrigin == Vector2.zero) {
 			rangeZOrigin = new Vector2(4.55f, 4.55f);	
 		}
-		lastSpawnTime = 0f;
+		lastSpawnTime = -rateInterval;
 		mWalkers = new HashSet<WavingGameCharacterController>();
 	}
 	
