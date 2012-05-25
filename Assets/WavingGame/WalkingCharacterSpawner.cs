@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class WalkingCharacterSpawner : MonoBehaviour {
 	public GameObject[] CharacterPrefabs;
@@ -7,8 +8,13 @@ public class WalkingCharacterSpawner : MonoBehaviour {
 	private Vector2 rangeYOrigin;
 	private Vector2 rangeZOrigin;
 	public bool spawnAtFixedRate;	// mostly for testing purposes
-	private float rateInterval = 4f;	// 4 seconds between spawns, if spawning at fixed rate
+	private float rateInterval = 8f;	// 4 seconds between spawns, if spawning at fixed rate
 	private float lastSpawnTime;
+	
+	private HashSet<WavingGameCharacterController> mWalkers;
+	public HashSet<WavingGameCharacterController> walkers {
+		get { return mWalkers; }
+	}
 	
 	private bool mSpawning;
 	public bool spawning {
@@ -36,6 +42,14 @@ public class WalkingCharacterSpawner : MonoBehaviour {
 		float zStart = Random.Range (rangeZOrigin.x, rangeZOrigin.y);
 		Vector3 position = new Vector3(xStart, yStart, zStart);
 		GameObject obj = (GameObject)Instantiate(objectPrefab, position, objectPrefab.transform.rotation);
+		mWalkers.Add(obj.GetComponent<WavingGameCharacterController>());
+	}
+	
+	public void removeWalker(WavingGameCharacterController walker) {
+		if (mWalkers.Contains(walker)) {
+			mWalkers.Remove(walker);
+			Destroy(walker.gameObject);
+		}
 	}
 	
 	// Use this for initialization
@@ -50,6 +64,7 @@ public class WalkingCharacterSpawner : MonoBehaviour {
 			rangeZOrigin = new Vector2(4.55f, 4.55f);	
 		}
 		lastSpawnTime = 0f;
+		mWalkers = new HashSet<WavingGameCharacterController>();
 	}
 	
 	// Update is called once per frame

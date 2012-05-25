@@ -80,6 +80,7 @@
      <Compile Include="Assets\WavingGame\WalkingCharacterController.cs" />
      <Compile Include="Assets\WavingGame\WalkingCharacterSpawner.cs" />
      <Compile Include="Assets\WavingGame\WavingGameCharacterController.cs" />
+     <Compile Include="Assets\WavingGame\WavingGameHandWaveTrigger.cs" />
      <Compile Include="Assets\WavingGame\WavingGameManager.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
   </ItemGroup>
