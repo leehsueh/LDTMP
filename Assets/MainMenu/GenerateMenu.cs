@@ -57,6 +57,8 @@ public class GenerateMenu : MonoBehaviour {
 		CurrentState = MenuState.WaitForPresence;
 		rightOptionHighlighted = false;
 		leftOptionHighlighted = false;
+		CustomPlayerManager mPlayerManager = (CustomPlayerManager)FindObjectOfType(typeof(CustomPlayerManager));
+		//mPlayerManager.MaxPlayers = 2;
 	}
 	
 	void Update() {

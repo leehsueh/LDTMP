@@ -11,6 +11,7 @@ public class CalibratedNodeJoint : MonoBehaviour {
 	private Vector3 initialPosition;	// the initial position of the tracked joint, to be "zeroed" at the base position
 	private int calibrationStepsNeeded = 20;
 	private int calibrationStepCount = 0;
+	private bool mirrorMode;	// obtained from the NodeRoot
 	
 	// Use this for initialization
 	void Start () {
@@ -28,6 +29,7 @@ public class CalibratedNodeJoint : MonoBehaviour {
 		while (m_Root == null && currParent != null) {
 			m_Root = (CalibratedNodeRoot)currParent.gameObject.GetComponent<CalibratedNodeRoot>();
 			currParent = currParent.gameObject.transform.parent;
+			mirrorMode = m_Root.mirrorMode;
 		}
 	}
 	
@@ -60,6 +62,7 @@ public class CalibratedNodeJoint : MonoBehaviour {
 				}
 			} else {
 				Vector3 diffVector = jointPosition - initialPosition;
+				if (!mirrorMode) diffVector = new Vector3(diffVector.x, diffVector.y, -diffVector.z);
 				gameObject.transform.localPosition = basePosition + diffVector;
 				
 				if (gameObject.Equals(m_Root.GetComponent<CalibratedNodeRoot>().core)) {

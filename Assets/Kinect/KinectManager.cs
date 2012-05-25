@@ -23,13 +23,16 @@ public class KinectManager : MonoBehaviour, IDisposable
 	/// Texture data 
 	/// </summary>
 	Texture2D m_ColorTexture;
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
 	Color32[] m_ColorArray;
 	GCHandle m_ColorHandle;
+#endif
 	
 	Texture2D m_DepthTexture;
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
 	Color32[] m_DepthArray;
 	GCHandle m_DepthHandle;
-    
+#endif
     KinectFilter m_SmoothingFilter;
 	
 	public KinectInterface.NUI_SKELETON_FRAME frameData = new KinectInterface.NUI_SKELETON_FRAME();
@@ -71,15 +74,19 @@ public class KinectManager : MonoBehaviour, IDisposable
         this.m_SmoothingFilter = new KinectFilter(KinectInterface.GUID_SkeletonSmoothingFilter, /* isEnabled */ true);
 
 		PlayerManager Manager = (PlayerManager)FindObjectOfType(typeof(PlayerManager));
-		
+
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
 		m_ColorTexture = new Texture2D(640, 480, TextureFormat.RGBA32, false);
 		m_ColorArray = m_ColorTexture.GetPixels32(0); 
 		m_ColorHandle = GCHandle.Alloc(m_ColorArray, GCHandleType.Pinned);
-		
+
 		m_DepthTexture = new Texture2D(320, 240, TextureFormat.RGBA32, false);
 		m_DepthArray = m_DepthTexture.GetPixels32();
 		m_DepthHandle = GCHandle.Alloc(m_DepthArray, GCHandleType.Pinned);
-		
+#else
+		m_ColorTexture = new Texture2D(1024, 512, TextureFormat.ARGB32, false);
+		m_DepthTexture = new Texture2D(1024, 512, TextureFormat.ARGB32, false);		
+#endif
 		Manager.MaxPlayers = 2;
 	}
 	
@@ -106,9 +113,9 @@ public class KinectManager : MonoBehaviour, IDisposable
 	    {
 	        if (disposing)
 	        {
-                //Release Managed Resources
+               //Release Managed Resources
 	        }
-
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
             //Release Unmanaged Resources
             if (m_ColorHandle.IsAllocated)
             {
@@ -118,6 +125,7 @@ public class KinectManager : MonoBehaviour, IDisposable
             {
                 m_DepthHandle.Free();
             }
+#endif
 	    }
 	    m_Disposed = true;
 
@@ -149,12 +157,17 @@ public class KinectManager : MonoBehaviour, IDisposable
 	/// </returns>
 	public Texture GetColorStream()
 	{
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
 		HRESULT.ThrowOnFailure(KinectInterface.GakCopyImageDataToTexturePtr(
                 m_ColorHandle.AddrOfPinnedObject(), 
                 KinectInterface.NuiImageStream.NSM_IMAGE_STREAM_COLOR_640x480));
 		m_ColorTexture.SetPixels32(m_ColorArray);
 		m_ColorTexture.Apply();
-		
+#else
+		HRESULT.ThrowOnFailure(KinectInterface.GakCopyImageDataToTexturePtr(
+			X360Core.GetRawTexture(m_ColorTexture),
+			KinectInterface.NuiImageStream.NSM_IMAGE_STREAM_COLOR_640x480));
+#endif
 		return m_ColorTexture;
 	}
 	
@@ -166,12 +179,17 @@ public class KinectManager : MonoBehaviour, IDisposable
 	/// </returns>
 	public Texture GetDepthStream()
 	{
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN	
 		HRESULT.ThrowOnFailure(KinectInterface.GakCopyImageDataToTexturePtr(
                 m_DepthHandle.AddrOfPinnedObject(), 
                 KinectInterface.NuiImageStream.NSM_IMAGE_STREAM_DEPTH_AND_PLAYERINDEX_320x240));
 		m_DepthTexture.SetPixels32(m_DepthArray);
 		m_DepthTexture.Apply();
-		
+#else
+		HRESULT.ThrowOnFailure(KinectInterface.GakCopyImageDataToTexturePtr(
+			X360Core.GetRawTexture(m_DepthTexture),
+			KinectInterface.NuiImageStream.NSM_IMAGE_STREAM_DEPTH_AND_PLAYERINDEX_320x240));
+#endif
 		return m_DepthTexture;
 	}
 	

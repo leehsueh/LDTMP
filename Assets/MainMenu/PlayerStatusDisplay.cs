@@ -17,6 +17,7 @@ public class PlayerStatusDisplay : MonoBehaviour {
 	void Update () {
 		mPlayer = playerNum == 1 ? mPlayerManager.Player1 : mPlayerManager.Player2;
 		mNumberOfBodies = mPlayerManager.TotalPlayers;
+		print (mNumberOfBodies + " bodies");
 	}
 	
 	void OnGUI() {

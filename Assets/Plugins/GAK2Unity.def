@@ -20,3 +20,4 @@ EXPORTS
 	GakSetFilterEnabled          @10
 	GakSetPlayerMaxCount         @11
 	GakGetPlayerManagerState     @12
+	GakGetFloorPlane             @13

@@ -8,6 +8,7 @@ public class CalibratedNodeRoot : MonoBehaviour {
 	public int playerNumber;	// should be 1 or 2 only; used to get the EnrolledPlayer associated with the player number from CustomPlayerManager
 	private uint playerID;
 	private bool playerSet;	// true if the player is an enrolled player
+	public bool mMirrorMode;	// true if player is shown as if looking at a mirror
 	
 	// Body parts
 	public GameObject core;
@@ -36,6 +37,10 @@ public class CalibratedNodeRoot : MonoBehaviour {
 	private CustomPlayerManager mPlayerManager;
 	
 	public GameObject gameManager;
+	
+	public bool mirrorMode {
+		get { return mMirrorMode; }	
+	}
 	
 	// Use this for initialization
 	void Start () {

@@ -248,6 +248,9 @@ public class PlayerManager : MonoBehaviour
 			{
 				TotalPlayers++;
 			}
+			if (TotalPlayers > 1) {
+				print(TotalPlayers + " players!");	
+			}
 		}
 	}
 	

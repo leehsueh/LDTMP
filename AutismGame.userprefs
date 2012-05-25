@@ -1,6 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MainMenu\PlayerStatusDisplay.cs">
+    <Files>
+      <File FileName="Assets\MainMenu\GenerateMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\WavingGame\WalkingCharacterController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Kinect\CustomPlayerManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\MainMenu\PlayerStatusDisplay.cs" Line="42" Column="39" />
+      <File FileName="Assets\Player\Skeleton\CalibratedNodeRoot.cs" Line="1" Column="1" />
+      <File FileName="Assets\Player\Skeleton\CalibratedNodeJoint.cs" Line="1" Column="1" />
+      <File FileName="Assets\Kinect\KinectInterface.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

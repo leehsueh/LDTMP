@@ -61,7 +61,7 @@ public class CustomPlayerManager : MonoBehaviour
     /// <summary>
 	/// Maximum number of players we want to track 
 	/// </summary>
-	private uint maxPlayers = 1;
+	private uint maxPlayers = 2;
 	
 	/// <summary>
 	/// Number of players currently tracked 
@@ -294,6 +294,9 @@ public class CustomPlayerManager : MonoBehaviour
 			{
 				TotalPlayers++;
 			}
+			if (TotalPlayers > 1) {
+				print(TotalPlayers + " players!");	
+			}
 		}
 	}
 	
@@ -326,7 +329,7 @@ public class CustomPlayerManager : MonoBehaviour
 				case PlayerEnrollmentState.Enrolled:
 					if (mPlayer1.PlayerID == 0) {
 						mPlayer1 = m_Players[I];	
-					} else if (mPlayer2.PlayerID == 0) {
+					} else if (mPlayer2.PlayerID == 0 && mPlayer1.PlayerID != m_Players[I].PlayerID) {
 						mPlayer2 = m_Players[I];	
 					}
 					break;

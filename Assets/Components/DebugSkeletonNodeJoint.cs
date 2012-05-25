@@ -22,11 +22,7 @@ public class DebugSkeletonNodeJoint : MonoBehaviour
 		{
 			m_Manager = (KinectManager)FindObjectOfType(typeof(KinectManager));
 		}
-		Transform currParent = gameObject.transform.parent;
-		while (m_Root == null && currParent != null) {
-			m_Root = (DebugSkeletonNodeRoot)currParent.gameObject.GetComponent<DebugSkeletonNodeRoot>();
-			currParent = currParent.gameObject.transform.parent;
-		}
+		m_Root = (DebugSkeletonNodeRoot)gameObject.transform.parent.gameObject.GetComponent<DebugSkeletonNodeRoot>();
 	}
 	
 	// Update is called once per frame

@@ -242,6 +242,9 @@ public static class KinectInterface
 	
 	[DllImport("Gak2Unity")]
 	public static extern uint GakGetPlayerManagerState(out PlayerManagerState State);
+	
+	[DllImport("Gak2Unity")]
+	public static extern uint GakGetFloorPlane(out Vector4 floorPlane);
     #endregion
 
 }
