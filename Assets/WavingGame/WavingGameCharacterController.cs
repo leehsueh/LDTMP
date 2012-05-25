@@ -12,4 +12,8 @@ public class WavingGameCharacterController : WalkingCharacterController {
 	void Update () {
 		base.Update();
 	}
+	
+	public override bool feedbackTriggerMet() {
+		return gameObject.transform.position.z < 1;
+	}
 }

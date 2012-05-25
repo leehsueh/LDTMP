@@ -1,11 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
-public class GestureRecognizer : MonoBehaviour {
-	public float duration;
-	protected float elapsed;
-	public CalibratedNodeRoot body;
-	
+public class HandWaveGesture : MonoBehaviour {
+
 	// Use this for initialization
 	void Start () {
 	
