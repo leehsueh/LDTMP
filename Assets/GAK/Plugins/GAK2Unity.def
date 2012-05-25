@@ -1,0 +1,23 @@
+;-----------------------------------------------------------------------------
+; Gak2Unity.def
+;
+; Wrapper functions for interop between Unity and NuiStream.
+;
+; Copyright (C) Microsoft Corporation. All rights reserved.
+;-----------------------------------------------------------------------------
+
+LIBRARY Gak2Unity
+EXPORTS
+	GakInit                      @1
+	GakUpdate                    @2
+	GakClose                     @3
+	GakSetStreamsPaused          @4
+	GakCopyImageDataToTexturePtr @5
+	GakGetSkeletonData           @6
+	GakAddFilter				 @7
+	GakRemoveFilter 		     @8
+	GakGetFilterEnabled          @9
+	GakSetFilterEnabled          @10
+	GakSetPlayerMaxCount         @11
+	GakGetPlayerManagerState     @12
+	GakGetFloorPlane             @13
