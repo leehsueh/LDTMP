@@ -1,6 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Kinect\CustomPlayerManager.cs">
+    <Files>
+      <File FileName="Assets\Kinect\CustomPlayerManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\WavingGame\WalkingCharacterSpawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\WavingGame\WavingGameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\WavingGame\WavingGameHandWaveTrigger.cs" Line="1" Column="1" />
+      <File FileName="Assets\WavingGame\WavingGameCharacterController.cs" Line="1" Column="1" />
+      <File FileName="Assets\WavingGame\WalkingCharacterController.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\Gestures\HandWaveGesture.cs" line="79" />
