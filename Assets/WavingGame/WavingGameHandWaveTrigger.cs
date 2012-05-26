@@ -17,7 +17,7 @@ public class WavingGameHandWaveTrigger : HandWaveGesture {
 	}
 	
 	WavingGameCharacterController closestWalker() {
-		HashSet<WavingGameCharacterController> walkers = mManager.characterSpawner.walkers;
+		LinkedList<WavingGameCharacterController> walkers = mManager.characterSpawner.walkers;
 		WavingGameCharacterController closestWalker = null;
 		float minDistance = 20;
 		foreach (WavingGameCharacterController walker in walkers) {

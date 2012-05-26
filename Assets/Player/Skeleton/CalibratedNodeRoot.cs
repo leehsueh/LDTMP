@@ -92,9 +92,7 @@ public class CalibratedNodeRoot : MonoBehaviour {
 				// lost the player
 				playerSet = !playerSet;
 				playerID = 0;
-				foreach (GameObject bodyPart in bodyJoints) {
-					bodyPart.GetComponent<CalibratedNodeJoint>().resetToBasePosition();	
-				}
+				invalidateCalibration();
 				gameObject.transform.position = basePosition;
 			}
 		}
@@ -127,12 +125,21 @@ public class CalibratedNodeRoot : MonoBehaviour {
 		}
 	}
 	
+	void invalidateCalibration() {
+		calibratedJoints = 0;
+		calibrationDone = false;
+		CalibratedNodeJoint[] joints = gameObject.GetComponentsInChildren<CalibratedNodeJoint>();
+		foreach (CalibratedNodeJoint joint in joints) {
+			joint.resetToBasePosition();
+		}
+	}
+	
 	public void recalibrate() {
 		calibratedJoints = 0;
 		calibrationDone = false;
 		CalibratedNodeJoint[] joints = gameObject.GetComponentsInChildren<CalibratedNodeJoint>();
 		foreach (CalibratedNodeJoint joint in joints) {
-			joint.recalibrateJoint();	
+			joint.recalibrateJoint();
 		}
 	}
 	
