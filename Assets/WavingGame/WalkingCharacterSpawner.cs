@@ -11,7 +11,21 @@ public class WalkingCharacterSpawner : MonoBehaviour {
 	public bool spawnAtFixedRate;	// mostly for testing purposes
 	private float rateInterval = 8f;	// 4 seconds between spawns, if spawning at fixed rate
 	private float lastSpawnTime;
-	private int mTargetIndex;
+	private int mTargetIndex = -1;
+	public string TargetName {
+		get {
+			if (mTargetIndex < 0) {
+				return "<target not set>";
+			} else {
+				return CharacterPrefabs[mTargetIndex].name;
+			}
+		}
+	}
+	private float defaultSpeed = 0.02f;
+	public float DefaultSpeed {
+		get { return defaultSpeed; }
+		set { defaultSpeed = value; }
+	}
 	
 	private LinkedList<WavingGameCharacterController> mWalkers;
 	public LinkedList<WavingGameCharacterController> walkers {
@@ -37,16 +51,25 @@ public class WalkingCharacterSpawner : MonoBehaviour {
 		spawnCharacter(random);
 	}
 	
+	public void spawnTargetCharacter() {
+		spawnCharacter(mTargetIndex);
+	}
+	
+	public void spawnCharacterButNotTarget() {
+		spawnCharacterButNotIndex(mTargetIndex);
+	}
+	
 	// spawn a character excluding the one at the given index
-	public void spawnCharacterButNotIndex(int index) {
-		int random = -1;
-		while (random != index) {
+	void spawnCharacterButNotIndex(int index) {
+		int random = index;
+		do {
 			random = Random.Range(0, CharacterPrefabs.Length);
-		}
+		} while (random == index);
+		
 		spawnCharacter(random);
 	}
 	
-	public void spawnCharacter(int index) {
+	void spawnCharacter(int index) {
 		if (spawning) {
 			GameObject objectPrefab = CharacterPrefabs[index];
 			float xStart = Random.Range(rangeXOrigin.x, rangeXOrigin.y);
@@ -80,10 +103,16 @@ public class WalkingCharacterSpawner : MonoBehaviour {
 	public void removeWalker(WavingGameCharacterController walker) {
 		if (mWalkers.Contains(walker)) {
 			mWalkers.Remove(walker);
-			Destroy(walker.gameObject);
 		}
 		print ("walker removed");
 		//mManager.MainWalker = mWalkers.Last.Value;
+	}
+	
+	public void killAll() {
+		foreach (WavingGameCharacterController walker in mWalkers) {
+			mWalkers.Remove(walker);
+			Destroy(walker.gameObject);
+		}
 	}
 	
 	// Use this for initialization

@@ -1,13 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\WavingGame\WalkingCharacterSpawner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Kinect\CustomPlayerManager.cs">
     <Files>
-      <File FileName="Assets\WavingGame\WavingGameManager.cs" Line="283" Column="49" />
-      <File FileName="Assets\WavingGame\WalkingCharacterSpawner.cs" Line="63" Column="4" />
-      <File FileName="Assets\WavingGame\WavingGameHandWaveTrigger.cs" Line="20" Column="9" />
-      <File FileName="Assets\Player\Gestures\HandWaveGesture.cs" Line="32" Column="2" />
-      <File FileName="Assets\MainMenu\PlayerStatusDisplay.cs" Line="37" Column="3" />
-      <File FileName="Assets\WavingGame\WalkingCharacterController.cs" Line="29" Column="14" />
+      <File FileName="Assets\WavingGame\WavingGameManager.cs" Line="11" Column="41" />
+      <File FileName="Assets\WavingGame\WalkingCharacterSpawner.cs" Line="66" Column="4" />
+      <File FileName="Assets\WavingGame\WavingGameHandWaveTrigger.cs" Line="17" Column="36" />
+      <File FileName="Assets\WavingGame\WavingGameCharacterController.cs" Line="21" Column="30" />
+      <File FileName="Assets\Labels\LabelFlash.cs" Line="1" Column="1" />
+      <File FileName="Assets\Kinect\CustomPlayerManager.cs" Line="163" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

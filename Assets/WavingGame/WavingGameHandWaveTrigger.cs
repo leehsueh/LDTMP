@@ -12,8 +12,9 @@ public class WavingGameHandWaveTrigger : HandWaveGesture {
 	
 	public override void triggerAction() {
 		print ("Action in the child!");
-		WalkingCharacterController closest = closestWalker();
-		closest.giveFeedback();
+//		WalkingCharacterController closest = closestWalker();
+//		closest.giveFeedback();
+		mManager.HandWaveDetected = true;
 	}
 	
 	WavingGameCharacterController closestWalker() {

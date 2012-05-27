@@ -139,7 +139,7 @@ public class HandWaveGesture : MonoBehaviour {
 				} else if (inOrOut == 0) {	// raised in
 					NextState = GestureState.HandRaisedIn;
 					numWavesCounted++;
-					print (numWavesCounted);
+					//print (numWavesCounted);
 				} else if (inOrOut == 1) {	// raised out
 					NextState = GestureState.HandRaisedOut;	
 				} else {
@@ -160,7 +160,7 @@ public class HandWaveGesture : MonoBehaviour {
 				} else if (inOrOut == 1) {	// raised out
 					NextState = GestureState.HandRaisedOut;	
 					numWavesCounted++;
-					print (numWavesCounted);
+					//print (numWavesCounted);
 				} else {
 					NextState = GestureState.WaitForHandRaise;	
 				}

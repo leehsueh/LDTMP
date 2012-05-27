@@ -7,6 +7,8 @@ public class WavingGameManager : MotionSandboxManager {
 	#region game components
 	public WalkingCharacterSpawner characterSpawner;
 	public CalibratedNodeRoot skeletonRoot;
+	public LabelFlash flashLabel;
+	private float probabilityOfTarget = 0.3f;
 	#endregion
 	
 	#region State machine parameters
@@ -32,6 +34,10 @@ public class WavingGameManager : MotionSandboxManager {
 	float victoryMessageTime;
 	float restartCountdownTime;
 	bool handWaveDetected;
+	public bool HandWaveDetected {
+		get { return handWaveDetected; }
+		set { handWaveDetected = value; }
+	}
 	#endregion
 	
 	#region utility checking methods
@@ -77,9 +83,10 @@ public class WavingGameManager : MotionSandboxManager {
 	void selectRandomTarget() {
 		int possibilities = characterSpawner.CharacterPrefabs.Length;
 	}
-	void flashMessage(string message) {
+	void flashMessage(string message, float duration) {
 		//TODO: implement this
-		print(message);
+		flashLabel.updateText(message);
+		flashLabel.show(duration);
 	}
 	void killExistingGameAndReset() {
 		//TODO: implement this
@@ -115,6 +122,7 @@ public class WavingGameManager : MotionSandboxManager {
 		if (characterSpawner == null) {
 			characterSpawner = (WalkingCharacterSpawner)FindObjectOfType(typeof(WalkingCharacterSpawner));
 			//characterSpawner.spawnAtFixedRate = true;
+			characterSpawner.DefaultSpeed = 0.04f;
 			characterSpawner.startSpawning();
 		}
 		if (skeletonRoot == null) {
@@ -148,7 +156,7 @@ public class WavingGameManager : MotionSandboxManager {
 		case GameState.ShowPrompt:
 			if (skeletonPresent()) {
 				if (promptDone(Time.time)) {
-					NextState = GameState.GameStart;	
+					NextState = GameState.GameStart;
 				} else {
 					NextState = GameState.ShowPrompt;	
 				}
@@ -164,17 +172,23 @@ public class WavingGameManager : MotionSandboxManager {
 				characterSpawner.startSpawning();
 				NextState = GameState.Spawning;
 			} else {
-				NextState = GameState.WaitForPresence;	
+				NextState = GameState.WaitForPresence;
+				characterSpawner.killAll();
 			}
 			break;
 		case GameState.Spawning:
 			if (skeletonPresent()) {
-				characterSpawner.spawnCharacter();
+				if (Random.Range (0f,1f) < probabilityOfTarget) {
+					characterSpawner.spawnTargetCharacter();
+				} else {
+					characterSpawner.spawnCharacterButNotTarget();
+				}
 				mMainWalker = characterSpawner.leastRecentlyAddedWalker();
 				// mTargetWalker will get set by the spawner when it spawns an instance of the target
 				NextState = GameState.WaitForWave;
 			} else {
-				NextState = GameState.WaitForPresence;	
+				NextState = GameState.WaitForPresence;
+				characterSpawner.killAll();
 			}
 			break;
 		case GameState.WaitForWave:
@@ -182,51 +196,60 @@ public class WavingGameManager : MotionSandboxManager {
 				if (handWaveDetected && mainWalkerAlive()) {
 					NextState = GameState.WaveRecognized;
 				} else if (!mainWalkerAlive()) {
-					//mMainWalker = characterSpawner.leastRecentlyAddedWalker();
-					NextState = GameState.WaveMissed;
+					if (mMainWalker == mTargetWalker) {
+						NextState = GameState.WaveMissed;	
+					} else {
+						NextState = GameState.Spawning;
+					}
+					characterSpawner.removeWalker(mMainWalker);
+					print ("Spawning from WaitForWave");
 				} else {
 					NextState = GameState.WaitForWave;	
 				}
 			} else {
 				NextState = GameState.WaitForPresence;	
+				characterSpawner.killAll();
 			}
 			break;
 		case GameState.WaveMissed:
-			flashMessage("Target Missed!");
+			flashMessage("Target Missed!", 2);
 			characterSpawner.removeWalker(mMainWalker);
 			NextState = GameState.Spawning;
+			print ("Spawning from WaveMissed");
 			break;
 		case GameState.WaveRecognized:
 			if (skeletonPresent()) {
 				handWaveDetected = false;
-				flashMessage("You waved.");
-				if (mMainWalker == mTargetWalker) {
+				if (mMainWalker == mTargetWalker && !mTargetWalker.DidGiveFeedback) {
 					//TODO: also check for distance from target!
 					mTargetWalker.giveFeedback();
 					NextState = GameState.PerformAnimation;
-					print ("you waved to the target!");
+//					flashMessage("You waved to " + characterSpawner.TargetName);
+//					print ("you waved to the target!");
 				} else {
-					NextState = GameState.WaitForWave;	
+					mMainWalker.Speed = 0.06f;
+					NextState = GameState.WaitForWave;
+					flashMessage("Oops! That's not " + characterSpawner.TargetName, 2f);
 				}
 			} else {
-				NextState = GameState.WaitForPresence;	
+				NextState = GameState.WaitForPresence;
+				characterSpawner.killAll();
 			}
 			break;
 		case GameState.PerformAnimation:
-			if (skeletonPresent()) {
-				if (mTargetWalker.animation.IsPlaying(mTargetWalker.feedbackMotionName)) {
-					NextState = GameState.PerformAnimation;	
-				} else {
-					NextState = GameState.ShowVictoryMessage;
-					startVictoryMessageTimer();
-				}
+			if (mTargetWalker.animation.IsPlaying(mTargetWalker.feedbackMotionName)) {
+				NextState = GameState.PerformAnimation;	
 			} else {
-				NextState = GameState.WaitForPresence;	
+				NextState = GameState.ShowVictoryMessage;
+				flashMessage("Good job! You waved to " + characterSpawner.TargetName, victoryMessageDuration);
+				characterSpawner.stopSpawning();
+				startVictoryMessageTimer();
 			}
 			break;
 		case GameState.ShowVictoryMessage:
 			if (victoryMessageDone(Time.time)) {
 				NextState = GameState.RestartCountdown;
+				characterSpawner.killAll();
 				startRestartCountdownTimer();
 			} else {
 				NextState = GameState.ShowVictoryMessage;	
@@ -235,27 +258,28 @@ public class WavingGameManager : MotionSandboxManager {
 		case GameState.RestartCountdown:
 			if (restartCountdownDone(Time.time)) {
 				NextState = GameState.ShowPrompt;
-				startRestartCountdownTimer();
+				startPromptTimer();
 				characterSpawner.selectRandomTarget();
 			} else {
-				NextState = GameState.ShowVictoryMessage;	
+				NextState = GameState.RestartCountdown;	
 			}
 			break;
 		}
-		
 		CurrentState = NextState;
 	}
 
 	void OnGUI() {
+		string statusMessage = CurrentState.ToString();
+		
 		switch (CurrentState) {
 		case GameState.WaitForPresence:
 			
 			break;
 		case GameState.WaitForCalibration:
-			
+			statusMessage = "Hold Still...";
 			break;
 		case GameState.ShowPrompt:
-			
+			statusMessage = "Wave Hello to " + characterSpawner.TargetName;
 			break;
 		case GameState.GameStart:
 			
@@ -275,14 +299,13 @@ public class WavingGameManager : MotionSandboxManager {
 			
 			break;
 		case GameState.ShowVictoryMessage:
-			
+			statusMessage = "You waved to " + characterSpawner.TargetName;
 			break;
 		case GameState.RestartCountdown:
-			
+			statusMessage = "Restarting in " + (int)(restartCountdownDuration - Time.time + restartCountdownTime);
 			break;
 		}
 		
-		string statusMessage = CurrentState.ToString();
 		int labelWidth = 500;
 		int labelHeight = 100;
 		GUIStyle style = new GUIStyle();

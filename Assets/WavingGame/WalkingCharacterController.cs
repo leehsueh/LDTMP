@@ -2,9 +2,16 @@ using UnityEngine;
 using System.Collections;
 
 public class WalkingCharacterController : MonoBehaviour {
-	public float speedMultiplier = 0.01f;
+	private float speedMultiplier = 0.01f;
+	public float Speed {
+		get { return speedMultiplier; }	
+		set { speedMultiplier = value; }
+	}
 	public string feedbackMotionName;
-	private bool didGiveFeedback;
+	protected bool didGiveFeedback;
+	public bool DidGiveFeedback {
+		get { return didGiveFeedback; }	
+	}
 	private Vector3 directionVector;
 	private MotionSandboxManager gameManager;
 	private float offscreenZ;	// the z coordinate indicating where the camera is; used to determine when character is off screen in the z direction
