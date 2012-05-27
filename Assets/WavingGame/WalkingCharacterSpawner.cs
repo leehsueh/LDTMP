@@ -60,6 +60,9 @@ public class WalkingCharacterSpawner : MonoBehaviour {
 			if (index == mTargetIndex) {
 				mManager.TargetWalker = obj.GetComponent<WavingGameCharacterController>();
 			}
+//			if (mWalkers.Count == 1) {
+//				mManager.MainWalker = obj.GetComponent<WavingGameCharacterController>();
+//			}
 		}
 	}
 	
@@ -79,6 +82,8 @@ public class WalkingCharacterSpawner : MonoBehaviour {
 			mWalkers.Remove(walker);
 			Destroy(walker.gameObject);
 		}
+		print ("walker removed");
+		//mManager.MainWalker = mWalkers.Last.Value;
 	}
 	
 	// Use this for initialization

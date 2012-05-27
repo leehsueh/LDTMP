@@ -56,10 +56,11 @@ public class WavingGameManager : MotionSandboxManager {
 	}
 	
 	bool mainWalkerAlive() {
-		if (mMainWalker)
-			return mMainWalker.gameObject.transform.position.z < pointOfPassingZ;
-		else
+		if (mMainWalker) {
+			return mMainWalker.gameObject.transform.position.z > pointOfPassingZ;
+		} else {
 			return false;
+		}
 	}
 	#endregion
 	
@@ -181,7 +182,7 @@ public class WavingGameManager : MotionSandboxManager {
 				if (handWaveDetected && mainWalkerAlive()) {
 					NextState = GameState.WaveRecognized;
 				} else if (!mainWalkerAlive()) {
-					mMainWalker = characterSpawner.leastRecentlyAddedWalker();
+					//mMainWalker = characterSpawner.leastRecentlyAddedWalker();
 					NextState = GameState.WaveMissed;
 				} else {
 					NextState = GameState.WaitForWave;	
@@ -192,6 +193,7 @@ public class WavingGameManager : MotionSandboxManager {
 			break;
 		case GameState.WaveMissed:
 			flashMessage("Target Missed!");
+			characterSpawner.removeWalker(mMainWalker);
 			NextState = GameState.Spawning;
 			break;
 		case GameState.WaveRecognized:
