@@ -78,6 +78,7 @@
      <Compile Include="Assets\Props\CheapSky\MouseLookYY.cs" />
      <Compile Include="Assets\Props\CheapSky\StickToCamera.cs" />
      <Compile Include="Assets\StaticPlayer\PlayerMovementController.cs" />
+     <Compile Include="Assets\WavingGame\BoxFlash.cs" />
      <Compile Include="Assets\WavingGame\MotionSandboxManager.cs" />
      <Compile Include="Assets\WavingGame\WalkingCharacterController.cs" />
      <Compile Include="Assets\WavingGame\WalkingCharacterSpawner.cs" />

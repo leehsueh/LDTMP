@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 public class WalkingCharacterSpawner : MonoBehaviour {
 	public WavingGameManager mManager;
+	public string correctReactionAnimation;
+	public string wrongReactionAnimation;
+	public Texture2D[] walkerPortraits;
 	public GameObject[] CharacterPrefabs;
 	public Vector2 rangeXOrigin;
 	private Vector2 rangeYOrigin;
@@ -18,6 +21,16 @@ public class WalkingCharacterSpawner : MonoBehaviour {
 				return "<target not set>";
 			} else {
 				return CharacterPrefabs[mTargetIndex].name;
+			}
+		}
+	}
+	
+	public Texture2D TargetPicture {
+		get {
+			if (mTargetIndex >=0 && walkerPortraits.Length > mTargetIndex) {
+				return walkerPortraits[mTargetIndex];	
+			} else {
+				return null;	
 			}
 		}
 	}
@@ -77,11 +90,13 @@ public class WalkingCharacterSpawner : MonoBehaviour {
 			float zStart = Random.Range (rangeZOrigin.x, rangeZOrigin.y);
 			Vector3 position = new Vector3(xStart, yStart, zStart);
 			GameObject obj = (GameObject)Instantiate(objectPrefab, position, objectPrefab.transform.rotation);
-			mWalkers.AddFirst(obj.GetComponent<WavingGameCharacterController>());
+			WavingGameCharacterController walker = obj.GetComponent<WavingGameCharacterController>();
+			walker.feedbackMotionName = correctReactionAnimation;
+			mWalkers.AddFirst(walker);
 			
 			// check if it's the target character
 			if (index == mTargetIndex) {
-				mManager.TargetWalker = obj.GetComponent<WavingGameCharacterController>();
+				mManager.TargetWalker = walker;
 			}
 //			if (mWalkers.Count == 1) {
 //				mManager.MainWalker = obj.GetComponent<WavingGameCharacterController>();
@@ -92,7 +107,7 @@ public class WalkingCharacterSpawner : MonoBehaviour {
 	public int selectRandomTarget() {
 		//TODO: make this random
 		//mTargetIndex = Random.Range(0, CharacterPrefabs.Length);	
-		mTargetIndex = 0;
+		mTargetIndex = 1;
 		return mTargetIndex;
 	}
 	
@@ -110,9 +125,9 @@ public class WalkingCharacterSpawner : MonoBehaviour {
 	
 	public void killAll() {
 		foreach (WavingGameCharacterController walker in mWalkers) {
-			mWalkers.Remove(walker);
 			Destroy(walker.gameObject);
 		}
+		mWalkers.Clear();
 	}
 	
 	// Use this for initialization
@@ -124,7 +139,7 @@ public class WalkingCharacterSpawner : MonoBehaviour {
 			rangeYOrigin = new Vector2(0.55f, 0.55f);	
 		}
 		if (rangeZOrigin == Vector2.zero) {
-			rangeZOrigin = new Vector2(4.55f, 4.55f);	
+			rangeZOrigin = new Vector2(3.55f, 3.55f);	
 		}
 		lastSpawnTime = -rateInterval;
 		mWalkers = new LinkedList<WavingGameCharacterController>();

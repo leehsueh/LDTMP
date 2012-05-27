@@ -8,6 +8,7 @@ public class WavingGameManager : MotionSandboxManager {
 	public WalkingCharacterSpawner characterSpawner;
 	public CalibratedNodeRoot skeletonRoot;
 	public LabelFlash flashLabel;
+	public BoxFlash flashBox;
 	private float probabilityOfTarget = 0.3f;
 	#endregion
 	
@@ -72,7 +73,13 @@ public class WavingGameManager : MotionSandboxManager {
 	
 	#region state machine actions
 	void startPromptTimer() {
-		promptTime = Time.time;	
+		promptTime = Time.time;
+		flashBox.Message = "Wave Hello to " + characterSpawner.TargetName;
+		flashBox.Image = characterSpawner.TargetPicture;
+		flashBox.Duration = promptDuration;
+		flashBox.Center = new Vector2(Screen.width/2, 200);
+		flashBox.WidthHeight = new Vector2(400, 300);
+		flashBox.show();
 	}
 	void startVictoryMessageTimer() {
 		victoryMessageTime = Time.time;	
@@ -144,8 +151,8 @@ public class WavingGameManager : MotionSandboxManager {
 			if (skeletonPresent()) {
 				if (skeletonRoot.isCalibrated()) {
 					NextState = GameState.ShowPrompt;
-					startPromptTimer();
 					characterSpawner.selectRandomTarget();
+					startPromptTimer();
 				} else {
 					NextState = GameState.WaitForCalibration;	
 				}
@@ -279,7 +286,7 @@ public class WavingGameManager : MotionSandboxManager {
 			statusMessage = "Hold Still...";
 			break;
 		case GameState.ShowPrompt:
-			statusMessage = "Wave Hello to " + characterSpawner.TargetName;
+			//statusMessage = "Wave Hello to " + characterSpawner.TargetName;
 			break;
 		case GameState.GameStart:
 			
