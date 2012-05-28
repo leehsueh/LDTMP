@@ -9,6 +9,11 @@ public class CalibratedNodeRoot : MonoBehaviour {
 	private uint playerID;
 	private bool playerSet;	// true if the player is an enrolled player
 	public bool mMirrorMode;	// true if player is shown as if looking at a mirror
+	private bool constrainZMovement;
+	public bool ConstrainZMovement {
+		get { return constrainZMovement; }
+		set { constrainZMovement = value; }
+	}
 	
 	// Body parts
 	public GameObject core;

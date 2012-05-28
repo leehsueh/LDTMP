@@ -29,11 +29,11 @@ public class FallingObjectKinectController : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter(Collider collider) {
-		//print ("Ball collision detected with " + collider.gameObject.name);
+		print ("Ball collision detected with " + collider.gameObject.name);
 		Transform parentCollidee = collider.gameObject.transform.parent;
 		if (parentCollidee != null && parentCollidee.gameObject.Equals(player) && !collidedWithPlayer) {
-			explode();
-			gameManager.GetComponent<FallingObjectGameStatus>().checkCollision(gameObject.collider);
+			//explode();
+			gameManager.GetComponent<FallingObjectGameManager>().CollidedObject = gameObject;
 		}
 	}
 	

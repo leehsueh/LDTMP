@@ -2,13 +2,13 @@ using UnityEngine;
 using System.Collections;
 
 public class FallingObjectSpawner : MonoBehaviour {
+	public Texture[] textures;
 	public Color[] colors = {Color.red, Color.blue, Color.green, Color.yellow, Color.gray, Color.black, Color.magenta};
 	public float drag;
 	public GameObject[] fallingObjectPrefabs = {};
 	public float yStartHeight;
 	public float xleftBound, xRightBound;
 	public float minScale, maxScale;
-	public GameObject objectPrefab;
 	public float spawnRate = 2;
 	private float lastSpawnTime = 0;
 	
@@ -37,9 +37,10 @@ public class FallingObjectSpawner : MonoBehaviour {
 		float scaleFactor = Random.Range (minScale,maxScale);
 		Vector3 scale = new Vector3(scaleFactor,scaleFactor,scaleFactor);
 		GameObject obj = (GameObject)Instantiate(objectPrefab, position, objectPrefab.transform.rotation);
+		obj.renderer.material.mainTexture = textures[Random.Range(0, textures.Length)];
 		
 		index = Random.Range(0, colors.Length);
-		obj.renderer.material.color = colors[index];
+		//obj.renderer.material.color = colors[index];
 		obj.transform.localScale = scale;
 	}
 	

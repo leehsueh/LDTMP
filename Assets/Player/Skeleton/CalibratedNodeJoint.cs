@@ -62,6 +62,9 @@ public class CalibratedNodeJoint : MonoBehaviour {
 				}
 			} else {
 				Vector3 diffVector = jointPosition - initialPosition;
+				if (m_Root.ConstrainZMovement) {
+					diffVector.z = 0;	
+				}
 				if (!mirrorMode) diffVector = new Vector3(diffVector.x, diffVector.y, -diffVector.z);
 				gameObject.transform.localPosition = basePosition + diffVector;
 				

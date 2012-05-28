@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class FallingObjectGameStatus : MonoBehaviour {
-	
+	public bool constrainZMovement;
 	public int ballsToExplode = 3;
 	private int ballsExploded = 0;
 	public int gameDuration = 10;	// in interval units
@@ -14,6 +14,7 @@ public class FallingObjectGameStatus : MonoBehaviour {
 	
 	// game objects
 	private GameObject fallingObjectSpawner;
+	public ChoiceFallingObjectSpawner twoObjectSpawner;
 	private GameObject kinectPlayer;
 	
 	// UI stuff
@@ -23,14 +24,19 @@ public class FallingObjectGameStatus : MonoBehaviour {
 	public void setup() {
 		statusText.GetComponent<LabelFlash>().updateText("Stand still...");
 		statusText.GetComponent<LabelFlash>().show(3f);
+		twoObjectSpawner.spawnTwoProblem();
 	}
 	
 	// Use this for initialization
 	void Start () {
 		fallingObjectSpawner = GameObject.Find("FallingObjectSpawner");
 		fallingObjectSpawner.GetComponent<FallingObjectSpawner>().stopSpawning();
+		twoObjectSpawner = (ChoiceFallingObjectSpawner)FindObjectOfType(typeof(ChoiceFallingObjectSpawner));
 		
 		kinectPlayer = GameObject.Find ("Player");
+		if (constrainZMovement) {
+			kinectPlayer.GetComponent<CalibratedNodeRoot>().ConstrainZMovement = constrainZMovement;
+		}
 		setup ();
 	}
 	
@@ -83,7 +89,7 @@ public class FallingObjectGameStatus : MonoBehaviour {
 				//Color objColor = collider.gameObject.renderer.material.color;
 				//print("Collision with " + objColor.ToString() + " cube!");
 			}
-			else if (collider.gameObject.tag.Equals("FallingSphere")) {
+			else if (collider.gameObject.tag.Equals("FaceSphere")) {
 				//Color objColor = collider.gameObject.renderer.material.color;
 				//print("Collision with " + objColor.ToString() + " sphere!");
 				incrementCount();
