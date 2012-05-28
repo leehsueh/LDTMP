@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class ReturnToMainMenu : MonoBehaviour {
+	public GUIStyle style;
 	private CalibratedNodeRoot skeletonRoot;
 	
 	// state-related variables and methods
@@ -121,11 +122,7 @@ public class ReturnToMainMenu : MonoBehaviour {
 			statusMessage = "Returning to Main Menu...";
 			break;
 		}
-		GUIStyle style = new GUIStyle();
-//		style.fontSize = 24;
-//		style.alignment = TextAnchor.MiddleCenter;
-//		style.normal.textColor = Color.black;
-		//GUI.Label(new Rect(Screen.width/2 - labelWidth/2, 100, labelWidth, labelHeight), statusMessage, style);
-		GUI.Box (new Rect (100,100,300,50), statusMessage);
+
+		GUI.Box (new Rect (20,50,250,30), statusMessage, style);
 	}
 }

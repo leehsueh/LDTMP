@@ -288,5 +288,11 @@ public class FallingObjectGameManager : MonoBehaviour {
 		style.alignment = TextAnchor.MiddleCenter;
 		style.normal.textColor = Color.black;
 		GUI.Box(new Rect(Screen.width/2 - labelWidth/2, 100, labelWidth, labelHeight), statusMessage, style);
+		
+		GUIStyle scoreStyle = new GUIStyle();
+		scoreStyle.alignment = TextAnchor.MiddleLeft;
+		scoreStyle.fontSize = 24;
+		GUI.Label(new Rect(20, Screen.height/2 - 50, 150, 50), numCorrect + " faces", scoreStyle);
+		GUI.Label(new Rect(20, Screen.height/2, 150, 50), numIncorrect + " misses", scoreStyle);
 	}
 }

@@ -33,6 +33,7 @@ public class FallingObjectKinectController : MonoBehaviour {
 		Transform parentCollidee = collider.gameObject.transform.parent;
 		if (parentCollidee != null && parentCollidee.gameObject.Equals(player) && !collidedWithPlayer) {
 			//explode();
+			collidedWithPlayer = true;
 			gameManager.GetComponent<FallingObjectGameManager>().CollidedObject = gameObject;
 		}
 	}
