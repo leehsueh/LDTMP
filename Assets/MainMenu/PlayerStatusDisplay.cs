@@ -7,6 +7,9 @@ public class PlayerStatusDisplay : MonoBehaviour {
 	private CustomPlayerManager.EnrolledPlayer mPlayer;
 	private uint mNumberOfBodies;
 	
+	public GUIStyle style;
+	public Rect positionAndSize;
+	
 	// Use this for initialization
 	void Start () {
 		mPlayerManager = (CustomPlayerManager)FindObjectOfType(typeof(CustomPlayerManager));
@@ -35,12 +38,6 @@ public class PlayerStatusDisplay : MonoBehaviour {
 			break;
 		}
 		string statusMessage = mNumberOfBodies + " bodies, " + playerStatus;
-		int labelWidth = 500;
-		int labelHeight = 100;
-		GUIStyle style = new GUIStyle();
-		style.fontSize = 24;
-		style.alignment = TextAnchor.MiddleCenter;
-		style.normal.textColor = Color.black;
-		GUI.Box(new Rect(Screen.width/2 - labelWidth/2, 50, labelWidth, labelHeight), statusMessage, style);	
+		GUI.Box(positionAndSize, statusMessage, style);	
 	}
 }

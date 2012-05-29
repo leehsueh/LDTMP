@@ -3,6 +3,12 @@ using System.Collections;
 
 public class GenerateMenu : MonoBehaviour {
 	private CalibratedNodeRoot skeletonRoot;
+	public Camera mainCamera;
+	public GUIStyle itemStyle;
+	public GUIStyle itemStyleHighlighted;
+	public string[] itemTexts;
+	public Vector2[] sizes;
+	public GameObject[] lights;
 	
 	// state-related variables and methods
 	bool isSkeletonPresent() {
@@ -59,6 +65,9 @@ public class GenerateMenu : MonoBehaviour {
 		leftOptionHighlighted = false;
 		CustomPlayerManager mPlayerManager = (CustomPlayerManager)FindObjectOfType(typeof(CustomPlayerManager));
 		//mPlayerManager.MaxPlayers = 2;
+		foreach (GameObject light in lights) {
+			light.active = false;	
+		}
 	}
 	
 	void Update() {
@@ -144,17 +153,24 @@ public class GenerateMenu : MonoBehaviour {
 	}
 	
 	void OnGUI() {
-		GUI.Box (new Rect (100,100,200,50), "Raise Left Hand for the Waving Game");
-		GUI.Box (new Rect (Screen.width - 200-100,100,200,50), "Raise Right Hand for the Falling Object Game");
+//		GUI.Box (new Rect (100,100,200,50), "Falling Faces");
+//		GUI.Box (new Rect (Screen.width - 200-100,100,200,50), "Hello Park");
+		for (int i=0; i < sizes.Length; i++) {
+			Vector3 position = mainCamera.WorldToScreenPoint(lights[i].transform.position);
+			float width = sizes[i].x;
+			float height = sizes[i].y;
+			GUI.Box(new Rect(position.x - width/2, Screen.height - (position.y + height), width, height), itemTexts[i], itemStyle);
+			print (itemTexts[i]);
+		}
 		
-		string statusMessage = "<nothing>";
+		
+		string statusMessage = "";
 		// show status message based on the state
 		switch (CurrentState) {
 		case MenuState.WaitForPresence:
 			statusMessage = "We can't find you!";
 			break;
 		case MenuState.WaitForHandRaise:
-			statusMessage = "Raise hand to select.";
 			break;
 		case MenuState.LeftHandRaised:
 			statusMessage = "Keep Holding!";
@@ -164,7 +180,24 @@ public class GenerateMenu : MonoBehaviour {
 			break;
 		case MenuState.OptionSelected:
 			statusMessage = "Selection Made!";
+			if (rightOptionHighlighted) {
+				lights[1].light.color = Color.red;	
+			} else if (leftOptionHighlighted) {
+				lights[0].light.color = Color.red;	
+			}
 			break;
+		}
+		
+		// update the lights
+		if (rightOptionHighlighted) {
+			lights[1].active = true;	
+		} else {
+			lights[1].active = false;	
+		}
+		if (leftOptionHighlighted) {
+			lights[0].active = true;	
+		} else {
+			lights[0].active = false;	
 		}
 		int labelWidth = 500;
 		int labelHeight = 100;
@@ -172,6 +205,6 @@ public class GenerateMenu : MonoBehaviour {
 		style.fontSize = 24;
 		style.alignment = TextAnchor.MiddleCenter;
 		style.normal.textColor = Color.black;
-		GUI.Label(new Rect(Screen.width/2 - labelWidth/2, 300, labelWidth, labelHeight), statusMessage, style);
+		GUI.Label(new Rect(Screen.width/2 - labelWidth/2, 150, labelWidth, labelHeight), statusMessage, style);
 	}
 }

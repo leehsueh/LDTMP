@@ -31,6 +31,13 @@ public class CalibratedNodeJoint : MonoBehaviour {
 			currParent = currParent.gameObject.transform.parent;
 			mirrorMode = m_Root.mirrorMode;
 		}
+		
+		if (gameObject.Equals(m_Root.head) && !m_Root.mirrorMode) {
+			Quaternion rotation = Quaternion.Euler(gameObject.transform.rotation.eulerAngles.x, 
+				gameObject.transform.rotation.eulerAngles.y + 180, 
+				1.72f);
+			gameObject.transform.rotation = rotation;
+		}
 	}
 	
 	// Update is called once per frame
