@@ -1,13 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\FallingObjectKinect Scripts\FallingObjectGameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Player\Gestures\HandWaveGesture.cs">
     <Files>
-      <File FileName="Assets\FallingObjectKinect Scripts\FallingObjectPlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Kinect\CustomPlayerManager.cs" Line="1" Column="1" />
       <File FileName="Assets\WavingGame\WavingGameManager.cs" Line="1" Column="1" />
       <File FileName="Assets\FallingObjectKinect Scripts\FallingObjectGameManager.cs" Line="214" Column="56" />
-      <File FileName="Assets\FallingObjectKinect Scripts\FallingObjectKinectController.cs" Line="1" Column="1" />
-      <File FileName="Assets\WavingGame\WavingGameCharacterController.cs" Line="1" Column="1" />
-      <File FileName="Assets\FallingObjectKinect Scripts\ChoiceFallingObjectSpawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\Player\Gestures\HandWaveGesture.cs" Line="13" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
