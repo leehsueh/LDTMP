@@ -3,6 +3,8 @@ using System.Collections;
 
 public class ReturnToMainMenu : MonoBehaviour {
 	public GUIStyle style;
+	public Texture2D backgroundColor;
+	private Texture2D tex;
 	private CalibratedNodeRoot skeletonRoot;
 	
 	// state-related variables and methods
@@ -52,6 +54,20 @@ public class ReturnToMainMenu : MonoBehaviour {
 		if (player != null) {
 			skeletonRoot = player.GetComponent<CalibratedNodeRoot>();	
 		}
+		// set up background color of the box
+		backgroundColor = new Texture2D(250,30);
+		for (int y = 0; y < backgroundColor.height; ++y)
+        {
+            for (int x = 0; x < backgroundColor.width; ++x)
+            {
+                //float r = Random.value;
+				float r = 0.1f;
+                Color color = new Color(r, r, r, 1f);
+                backgroundColor.SetPixel(x, y, color);
+            }
+        }
+        backgroundColor.Apply();
+		style.normal.background = backgroundColor;
 		CurrentState = MenuState.WaitForPresence;
 	}
 	
@@ -123,6 +139,6 @@ public class ReturnToMainMenu : MonoBehaviour {
 			break;
 		}
 
-		GUI.Box (new Rect (20,50,250,30), statusMessage, style);
+		GUI.Box(new Rect (20,50,250,30), statusMessage, style);
 	}
 }

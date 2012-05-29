@@ -288,7 +288,7 @@ public class WavingGameManager : MotionSandboxManager {
 		
 		switch (CurrentState) {
 		case GameState.WaitForPresence:
-			
+			statusMessage = "Make the Pose Below";
 			break;
 		case GameState.WaitForCalibration:
 			statusMessage = "Hold Still...";

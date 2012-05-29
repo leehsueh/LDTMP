@@ -46,7 +46,7 @@ public class FallingObjectKinectController : MonoBehaviour {
 			
 			GameObject explosion = (GameObject)Instantiate(particleExplosionEffect, explosionPos, Quaternion.identity);
 			ParticleSystem ps = explosion.GetComponent<ParticleSystem>();
-			ps.startColor = color;
+			//ps.startColor = color;
 			ps.Emit(0);
 	}
 }

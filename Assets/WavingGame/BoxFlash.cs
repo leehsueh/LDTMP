@@ -9,7 +9,21 @@ public class BoxFlash : MonoBehaviour {
 	}
 	private Vector2 widthHeight;
 	public Vector2 WidthHeight {
-		set {widthHeight = value;}
+		set {
+			widthHeight = value;
+			backgroundColor = new Texture2D((int)widthHeight.x, (int)widthHeight.y);
+			for (int y = 0; y < backgroundColor.height; ++y)
+	        {
+	            for (int x = 0; x < backgroundColor.width; ++x)
+	            {
+	                //float r = Random.value;
+					float r = 0.95f;
+	                Color color = new Color(r, r, r, 0.8f);
+	                backgroundColor.SetPixel(x, y, color);
+	            }
+	        }
+	        backgroundColor.Apply();
+		}
 	}
 	
 	private Texture2D tex;
@@ -35,17 +49,18 @@ public class BoxFlash : MonoBehaviour {
 	}
 	
 	void Start() {
-		backgroundColor = new Texture2D(1,1);
-		for (int y = 0; y < tex.height; ++y)
+		backgroundColor = new Texture2D((int)widthHeight.x, (int)widthHeight.y);
+		for (int y = 0; y < backgroundColor.height; ++y)
         {
-            for (int x = 0; x < tex.width; ++x)
+            for (int x = 0; x < backgroundColor.width; ++x)
             {
-                float r = Random.value;
-                Color color = new Color(r, r, r);
-                tex.SetPixel(x, y, color);
+                //float r = Random.value;
+				float r = 0.95f;
+                Color color = new Color(r, r, r, 0.8f);
+                backgroundColor.SetPixel(x, y, color);
             }
         }
-        tex.Apply();
+        backgroundColor.Apply();
 	}
 	
     void OnGUI() {
@@ -64,8 +79,8 @@ public class BoxFlash : MonoBehaviour {
 			//style.wordWrap = true;
 			style.margin = new RectOffset(2, 2, 2, 2);
 			style.padding = new RectOffset(5, 5, 5, 5);
-			style.stretchWidth = true;
-			style.stretchHeight = true;
+			//style.stretchWidth = true;
+			//style.stretchHeight = true;
 			GUI.Box(new Rect(center.x - widthHeight.x/2, center.y - widthHeight.y/2, widthHeight.x, widthHeight.y), content, style);
 		}
 	}

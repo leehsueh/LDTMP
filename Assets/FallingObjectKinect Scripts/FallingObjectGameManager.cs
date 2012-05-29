@@ -10,6 +10,7 @@ public class FallingObjectGameManager : MonoBehaviour {
 	public CalibratedNodeRoot skeletonRoot;
 	public Texture2D placeHolderTexture;
 	public string targetTag;
+	public Texture2D facePicture;
 	#endregion
 	
 	#region state machine parameters
@@ -71,8 +72,8 @@ public class FallingObjectGameManager : MonoBehaviour {
 	#region state machine actions
 	void startPromptTimer() {
 		promptTime = Time.time;
-		flashBox.Message = "Pop the Faces!";
-		flashBox.Image = placeHolderTexture;
+		flashBox.Message = "Burst the Faces!";
+		flashBox.Image = facePicture;
 		flashBox.Duration = promptDuration;
 		flashBox.Center = new Vector2(Screen.width/2, 200);
 		flashBox.WidthHeight = new Vector2(400, 300);
@@ -210,8 +211,8 @@ public class FallingObjectGameManager : MonoBehaviour {
 			if (goalNumberMet() || maxIncorrectMet()) {
 				NextState = GameState.GameOver;
 				startGameOverMessageTimer();
-				if (goalNumberMet()) flashMessage("You popped all the faces!", gameOverMessageDuration);
-				else flashMessage("Sorry, you didn't pop enough faces.", gameOverMessageDuration);
+				if (goalNumberMet()) flashMessage("Great! You burst " + goalNumberCorrect + " faces!", gameOverMessageDuration);
+				else flashMessage("Sorry, you missed " + maxNumberIncorrect + " times.", gameOverMessageDuration);
 			} else {
 				NextState = GameState.WaitForObjectsDisappear;	
 			}
@@ -252,7 +253,7 @@ public class FallingObjectGameManager : MonoBehaviour {
 		
 		switch (CurrentState) {
 		case GameState.WaitForPresence:
-			
+			statusMessage = "Make the Pose Below";
 			break;
 		case GameState.WaitForCalibration:
 			statusMessage = "Hold Still...";
@@ -290,12 +291,12 @@ public class FallingObjectGameManager : MonoBehaviour {
 		style.fontSize = 36;
 		style.alignment = TextAnchor.MiddleCenter;
 		style.normal.textColor = Color.black;
-		GUI.Box(new Rect(Screen.width/2 - labelWidth/2, 100, labelWidth, labelHeight), statusMessage, style);
+		GUI.Box(new Rect(Screen.width/2 - labelWidth/2, 80, labelWidth, labelHeight), statusMessage, style);
 		
 		GUIStyle scoreStyle = new GUIStyle();
 		scoreStyle.alignment = TextAnchor.MiddleLeft;
 		scoreStyle.fontSize = 24;
-		GUI.Label(new Rect(20, Screen.height/2 - 50, 150, 50), numCorrect + " faces", scoreStyle);
-		GUI.Label(new Rect(20, Screen.height/2, 150, 50), numIncorrect + " misses", scoreStyle);
+//		GUI.Label(new Rect(20, Screen.height/2 - 50, 150, 50), numCorrect + " faces", scoreStyle);
+//		GUI.Label(new Rect(20, Screen.height/2, 150, 50), numIncorrect + " misses", scoreStyle);
 	}
 }

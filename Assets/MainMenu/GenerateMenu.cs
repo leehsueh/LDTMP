@@ -183,7 +183,7 @@ public class GenerateMenu : MonoBehaviour {
 		// show status message based on the state
 		switch (CurrentState) {
 		case MenuState.WaitForPresence:
-			statusMessage = "We can't find you!";
+			statusMessage = "Make the Pose Below";
 			break;
 		case MenuState.WaitForCalibration:
 			statusMessage = "Hold still...";
@@ -222,7 +222,7 @@ public class GenerateMenu : MonoBehaviour {
 		int labelWidth = 500;
 		int labelHeight = 100;
 		GUIStyle style = new GUIStyle();
-		style.fontSize = 24;
+		style.fontSize = 28;
 		style.alignment = TextAnchor.MiddleCenter;
 		style.normal.textColor = Color.black;
 		GUI.Label(new Rect(Screen.width/2 - labelWidth/2, 150, labelWidth, labelHeight), statusMessage, style);
