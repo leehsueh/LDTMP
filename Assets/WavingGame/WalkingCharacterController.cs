@@ -27,7 +27,7 @@ public class WalkingCharacterController : MonoBehaviour {
 	
 	// Update is called once per frame
 	public void Update () {
-		gameObject.transform.position += speedMultiplier * directionVector;
+		gameObject.transform.position += speedMultiplier * Time.deltaTime * directionVector;
 		if (feedbackTriggerMet() && !didGiveFeedback) {
 			giveFeedback();
 		} else {

@@ -18,6 +18,7 @@ public class FallingObjectGameManager : MonoBehaviour {
 	public float restartCountdownDuration;
 	public int goalNumberCorrect;
 	public int maxNumberIncorrect;
+	public bool showStates;
 	#endregion
 	
 	#region state machine variables
@@ -245,7 +246,9 @@ public class FallingObjectGameManager : MonoBehaviour {
 	
 	// mostly for debugging purposes to see what state the game is in
 	void OnGUI() {
-		string statusMessage = CurrentState.ToString();
+		string statusMessage;
+		if (showStates) statusMessage = CurrentState.ToString();
+		else statusMessage = "";
 		
 		switch (CurrentState) {
 		case GameState.WaitForPresence:

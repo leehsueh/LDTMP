@@ -10,6 +10,8 @@ public class WavingGameManager : MotionSandboxManager {
 	public LabelFlash flashLabel;
 	public BoxFlash flashBox;
 	private float probabilityOfTarget = 0.3f;
+	public float defaultSpeed;
+	public float fasterSpeed;
 	#endregion
 	
 	#region State machine parameters
@@ -18,6 +20,7 @@ public class WavingGameManager : MotionSandboxManager {
 	public float restartCountdownDuration;
 	public float minDistanceFromTarget;
 	public float pointOfPassingZ;
+	public bool showStates;
 	#endregion
 	
 	#region game state variables
@@ -129,9 +132,10 @@ public class WavingGameManager : MotionSandboxManager {
 		if (characterSpawner == null) {
 			characterSpawner = (WalkingCharacterSpawner)FindObjectOfType(typeof(WalkingCharacterSpawner));
 			//characterSpawner.spawnAtFixedRate = true;
-			characterSpawner.DefaultSpeed = 0.04f;
-			characterSpawner.startSpawning();
+			
 		}
+		characterSpawner.DefaultSpeed = defaultSpeed;
+		characterSpawner.startSpawning();
 		if (skeletonRoot == null) {
 			skeletonRoot = (CalibratedNodeRoot)FindObjectOfType(typeof(CalibratedNodeRoot));
 		}
@@ -229,12 +233,13 @@ public class WavingGameManager : MotionSandboxManager {
 				handWaveDetected = false;
 				if (mMainWalker == mTargetWalker && !mTargetWalker.DidGiveFeedback) {
 					//TODO: also check for distance from target!
+					mTargetWalker.Speed = 0f;
 					mTargetWalker.giveFeedback();
 					NextState = GameState.PerformAnimation;
 //					flashMessage("You waved to " + characterSpawner.TargetName);
 //					print ("you waved to the target!");
 				} else {
-					mMainWalker.Speed = 0.06f;
+					mMainWalker.Speed = fasterSpeed;
 					NextState = GameState.WaitForWave;
 					flashMessage("Oops! That's not " + characterSpawner.TargetName, 2f);
 				}
@@ -248,6 +253,7 @@ public class WavingGameManager : MotionSandboxManager {
 				NextState = GameState.PerformAnimation;	
 			} else {
 				NextState = GameState.ShowVictoryMessage;
+				mTargetWalker.Speed = defaultSpeed;
 				flashMessage("Good job! You waved to " + characterSpawner.TargetName, victoryMessageDuration);
 				characterSpawner.stopSpawning();
 				startVictoryMessageTimer();
@@ -276,7 +282,9 @@ public class WavingGameManager : MotionSandboxManager {
 	}
 
 	void OnGUI() {
-		string statusMessage = CurrentState.ToString();
+		string statusMessage;
+		if (showStates) statusMessage = CurrentState.ToString();
+		else statusMessage = "";
 		
 		switch (CurrentState) {
 		case GameState.WaitForPresence:
@@ -306,7 +314,7 @@ public class WavingGameManager : MotionSandboxManager {
 			
 			break;
 		case GameState.ShowVictoryMessage:
-			statusMessage = "You waved to " + characterSpawner.TargetName;
+			//statusMessage = "You waved to " + characterSpawner.TargetName;
 			break;
 		case GameState.RestartCountdown:
 			statusMessage = "Restarting in " + (int)(restartCountdownDuration - Time.time + restartCountdownTime);

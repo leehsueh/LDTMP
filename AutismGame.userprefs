@@ -1,23 +1,21 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\FallingObjectKinect Scripts\FallingObjectGameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\WavingGame\WalkingCharacterController.cs">
     <Files>
-      <File FileName="Assets\FallingObjectKinect Scripts\ChoiceFallingObjectSpawner.cs" Line="22" Column="2" />
-      <File FileName="Assets\FallingObjectKinect Scripts\FallingObjectGameManager.cs" Line="132" Column="42" />
-      <File FileName="Assets\Kinect\CustomPlayerManager.cs" Line="335" Column="1" />
-      <File FileName="Assets\FallingObjectKinect Scripts\FallingObjectKinectController.cs" Line="32" Column="3" />
-      <File FileName="Assets\Player\Skeleton\CalibratedNodeRoot.cs" Line="12" Column="24" />
+      <File FileName="Assets\FallingObjectKinect Scripts\FallingObjectGameManager.cs" Line="250" Column="49" />
+      <File FileName="Assets\FallingObjectKinect Scripts\FallingObjectKinectController.cs" Line="30" Column="2" />
+      <File FileName="Assets\MainMenu\GenerateMenu.cs" Line="11" Column="29" />
+      <File FileName="Assets\WavingGame\WavingGameManager.cs" Line="317" Column="6" />
+      <File FileName="Assets\WavingGame\WalkingCharacterController.cs" Line="30" Column="70" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\Gestures\HandWaveGesture.cs" line="79" />
-      <Breakpoint file="C:\Users\leehsueh\Development\AutismGame\Assets\WavingGame\WavingGameManager.cs" line="55" />
       <Breakpoint file="C:\Users\leehsueh\Development\AutismGame\Assets\FallingObject\FallingObjectController.cs" line="33" />
-      <Breakpoint file="C:\Users\leehsueh\Development\AutismGame\Assets\FallingObjectKinect Scripts\FallingObjectGameManager.cs" line="60" />
-      <Breakpoint file="C:\Users\leehsueh\Development\AutismGame\Assets\FallingObjectKinect Scripts\FallingObjectGameManager.cs" line="35" />
-      <Breakpoint file="C:\Users\leehsueh\Development\AutismGame\Assets\FallingObjectKinect Scripts\FallingObjectKinectController.cs" line="42" />
-      <Breakpoint file="C:\Users\leehsueh\Development\AutismGame\Assets\FallingObjectKinect Scripts\FallingObjectGameManager.cs" line="180" />
+      <Breakpoint file="C:\Users\leehsueh\Development\AutismGame\Assets\FallingObjectKinect Scripts\FallingObjectKinectController.cs" line="37" />
+      <Breakpoint file="C:\Users\leehsueh\Development\AutismGame\Assets\WavingGame\WavingGameManager.cs" line="58" />
+      <Breakpoint file="C:\Users\leehsueh\Development\AutismGame\Assets\FallingObjectKinect Scripts\FallingObjectGameManager.cs" line="181" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

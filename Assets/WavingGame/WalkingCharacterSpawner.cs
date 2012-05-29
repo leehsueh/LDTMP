@@ -34,7 +34,7 @@ public class WalkingCharacterSpawner : MonoBehaviour {
 			}
 		}
 	}
-	private float defaultSpeed = 0.02f;
+	private float defaultSpeed;
 	public float DefaultSpeed {
 		get { return defaultSpeed; }
 		set { defaultSpeed = value; }
@@ -91,6 +91,7 @@ public class WalkingCharacterSpawner : MonoBehaviour {
 			Vector3 position = new Vector3(xStart, yStart, zStart);
 			GameObject obj = (GameObject)Instantiate(objectPrefab, position, objectPrefab.transform.rotation);
 			WavingGameCharacterController walker = obj.GetComponent<WavingGameCharacterController>();
+			walker.Speed = DefaultSpeed;
 			walker.feedbackMotionName = correctReactionAnimation;
 			mWalkers.AddFirst(walker);
 			

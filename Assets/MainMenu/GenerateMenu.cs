@@ -15,6 +15,10 @@ public class GenerateMenu : MonoBehaviour {
 		return skeletonRoot.GetEnrolledPlayer().PlayerID != 0;
 	}
 	
+	bool isSkeletonCalibrated() {
+		return skeletonRoot.isCalibrated();	
+	}
+	
 	// whichHand should be "left" or "right"
 	bool isHandRaised(string whichHand) {
 		KinectInterface.NUI_SKELETON_DATA skeletonData;
@@ -45,6 +49,7 @@ public class GenerateMenu : MonoBehaviour {
 	
 	enum MenuState {
 		WaitForPresence,
+		WaitForCalibration,
 		WaitForHandRaise,
 		RightHandRaised,
 		LeftHandRaised,
@@ -73,8 +78,19 @@ public class GenerateMenu : MonoBehaviour {
 	void Update() {
 		switch (CurrentState) {
 		case MenuState.WaitForPresence:
-			if (isSkeletonPresent()) NextState = MenuState.WaitForHandRaise;
+			if (isSkeletonPresent()) NextState = MenuState.WaitForCalibration;
 			else NextState = MenuState.WaitForPresence;
+			break;
+		case MenuState.WaitForCalibration:
+			if (isSkeletonPresent()) {
+				if (isSkeletonCalibrated()) {
+					NextState = MenuState.WaitForHandRaise;	
+				} else {
+					NextState = MenuState.WaitForCalibration;	
+				}
+			} else {
+				NextState = MenuState.WaitForPresence;	
+			}
 			break;
 		case MenuState.WaitForHandRaise:
 			rightOptionHighlighted = false;
@@ -160,7 +176,6 @@ public class GenerateMenu : MonoBehaviour {
 			float width = sizes[i].x;
 			float height = sizes[i].y;
 			GUI.Box(new Rect(position.x - width/2, Screen.height - (position.y + height), width, height), itemTexts[i], itemStyle);
-			print (itemTexts[i]);
 		}
 		
 		
@@ -170,13 +185,18 @@ public class GenerateMenu : MonoBehaviour {
 		case MenuState.WaitForPresence:
 			statusMessage = "We can't find you!";
 			break;
+		case MenuState.WaitForCalibration:
+			statusMessage = "Hold still...";
+			break;
 		case MenuState.WaitForHandRaise:
 			break;
 		case MenuState.LeftHandRaised:
-			statusMessage = "Keep Holding!";
+			//statusMessage = "Keep Holding!";
+			statusMessage = "Hold for " + (int)(raiseTimeDuration - (Time.time - raiseTime));
 			break;
 		case MenuState.RightHandRaised:
 			statusMessage = "Keep Holding";
+			statusMessage = "Hold for " + (int)(raiseTimeDuration - (Time.time - raiseTime));
 			break;
 		case MenuState.OptionSelected:
 			statusMessage = "Selection Made!";
