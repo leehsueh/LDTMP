@@ -133,6 +133,8 @@ public class FallingObjectGameManager : MonoBehaviour {
 		CurrentState = GameState.WaitForPresence;
 		skeletonRoot.ConstrainZMovement = true;
 		resetState();
+		FallingFacesInfoScript info = (FallingFacesInfoScript)FindObjectOfType(typeof(FallingFacesInfoScript));
+		Debug.Log("Level: " + info.LevelSelected);
 	}
 	
 	// Update is called once per frame

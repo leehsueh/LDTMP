@@ -48,6 +48,7 @@
      <Compile Include="Assets\FallingObject\FallingObjectController.cs" />
      <Compile Include="Assets\FallingObject\FallingObjectSpawner.cs" />
      <Compile Include="Assets\FallingObjectKinect Scripts\ChoiceFallingObjectSpawner.cs" />
+     <Compile Include="Assets\FallingObjectKinect Scripts\FallingFacesInfoScript.cs" />
      <Compile Include="Assets\FallingObjectKinect Scripts\FallingObjectGameManager.cs" />
      <Compile Include="Assets\FallingObjectKinect Scripts\FallingObjectGameStatus.cs" />
      <Compile Include="Assets\FallingObjectKinect Scripts\FallingObjectKinectController.cs" />

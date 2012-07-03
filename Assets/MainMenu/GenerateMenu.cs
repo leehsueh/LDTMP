@@ -9,6 +9,7 @@ public class GenerateMenu : MonoBehaviour {
 	public string[] itemTexts;
 	public Vector2[] sizes;
 	public GameObject[] lights;
+	private float[] anglesOfLights;	// calculated based on the positions of the lights
 	
 	// state-related variables and methods
 	bool isSkeletonPresent() {
@@ -20,30 +21,69 @@ public class GenerateMenu : MonoBehaviour {
 	}
 	
 	// whichHand should be "left" or "right"
-	bool isHandRaised(string whichHand) {
+	int optionHandIsPointedTo(string whichHand) {
+		int optionNumber = -1;
 		KinectInterface.NUI_SKELETON_DATA skeletonData;
 		if (skeletonRoot.GetSkeletonDataForPlayer(out skeletonData)) {
-			KinectInterface.Vector4 HeadPos = skeletonData.SkeletonPositions[(int)KinectInterface.NUI_SKELETON_POSITION_INDEX.NUI_SKELETON_POSITION_HEAD];
-			KinectInterface.Vector4 RightHand = skeletonData.SkeletonPositions[(int)KinectInterface.NUI_SKELETON_POSITION_INDEX.NUI_SKELETON_POSITION_HAND_RIGHT];
-			KinectInterface.Vector4 LeftHand = skeletonData.SkeletonPositions[(int)KinectInterface.NUI_SKELETON_POSITION_INDEX.NUI_SKELETON_POSITION_HAND_LEFT];
-			
+			Vector3 Hand, Shoulder;
 			if (whichHand.Equals("left")) {
-				return LeftHand.Y > HeadPos.Y;
+				Hand = skeletonRoot.leftHand.transform.position;
+				Shoulder = skeletonRoot.leftShoulder.transform.position;
 			} else if (whichHand.Equals("right")) {
-				return RightHand.Y > HeadPos.Y;
+				Hand = skeletonRoot.rightHand.transform.position;
+				Shoulder = skeletonRoot.rightShoulder.transform.position;
 			} else {
-				return false;
+				Debug.LogError("Invalid argument: " + whichHand + " in optionHandIsPointedTo");
+				return optionNumber;
 			}
-		} else {
-			return false;
+			if (Hand.y > Shoulder.y) {
+				float angleOfHand = angleFromPlayerPosition(
+					Hand
+				);
+				float delta = 10f;
+				float[] diffs = new float[anglesOfLights.Length];
+				for (int i = 0; i < anglesOfLights.Length; i++) {
+					diffs[i] = Mathf.Abs(angleOfHand - anglesOfLights[i]);
+				}
+				int minIndex = 0;
+				float minDiff = diffs[0];
+				for (int i = 0; i < diffs.Length; i++) {
+					if (diffs[i] < minDiff) {
+						minIndex = i;
+						minDiff = diffs[i];
+					}
+				}
+				optionNumber = minIndex;
+			}
 		}
 		
+		return optionNumber;
+	}
+	
+	/**
+	 * the angle measured from positive x axis of the option text
+	 * corresponding to the given optionNumber
+	 */
+	float angleOfMenuOption(int optionNumber) {
+		Vector3 optionPosition = lights[optionNumber].transform.position;
+		return angleFromPlayerPosition(optionPosition);
+	}
+	
+	float angleFromPlayerPosition(Vector3 otherPosition) {
+		Vector3 playerPosition = skeletonRoot.gameObject.transform.position;
+		
+		float deltaX = otherPosition.x - playerPosition.x;
+		float deltaY = otherPosition.y - playerPosition.y;
+		float theta = Mathf.Atan(deltaY/deltaX);
+		float thetaDeg = theta * 180/Mathf.PI;
+		return thetaDeg;
 	}
 	
 	private float raiseTimeDuration = 3f;	// 3 seconds to make a selection
 	private float raiseTime;
 	private float selectionConfirmTimeDuration = 1f;	// 1 second to show a message saying what was selected
 	private float selectionConfirmTime;
+	private int optionHighlighted = -1;	// 0 for first option, 1 for second option, etc
 	private bool rightOptionHighlighted;
 	private bool leftOptionHighlighted;
 	
@@ -66,12 +106,14 @@ public class GenerateMenu : MonoBehaviour {
 			skeletonRoot = player.GetComponent<CalibratedNodeRoot>();	
 		}
 		CurrentState = MenuState.WaitForPresence;
+		optionHighlighted = -1;
 		rightOptionHighlighted = false;
 		leftOptionHighlighted = false;
 		CustomPlayerManager mPlayerManager = (CustomPlayerManager)FindObjectOfType(typeof(CustomPlayerManager));
 		//mPlayerManager.MaxPlayers = 2;
+		anglesOfLights = new float[lights.Length];
 		foreach (GameObject light in lights) {
-			light.active = false;	
+			light.active = false;
 		}
 	}
 	
@@ -93,13 +135,16 @@ public class GenerateMenu : MonoBehaviour {
 			}
 			break;
 		case MenuState.WaitForHandRaise:
+			optionHighlighted = -1;
 			rightOptionHighlighted = false;
 			leftOptionHighlighted = false;
 			if (isSkeletonPresent()) {
-				if (isHandRaised("left")) {
+				if (optionHandIsPointedTo("left") >= 0) {
+					optionHighlighted = optionHandIsPointedTo("left");
 					NextState = MenuState.LeftHandRaised;
 					raiseTime = Time.time;
-				} else if (isHandRaised("right")) {
+				} else if (optionHandIsPointedTo("right") >= 0) {
+					optionHighlighted = optionHandIsPointedTo("right");
 					NextState = MenuState.RightHandRaised;
 					raiseTime = Time.time;
 				} else {
@@ -111,9 +156,7 @@ public class GenerateMenu : MonoBehaviour {
 			break;
 		case MenuState.LeftHandRaised:
 			if (isSkeletonPresent()) {
-				if (isHandRaised("left")) {
-					leftOptionHighlighted = true;
-					rightOptionHighlighted = false;
+				if (optionHighlighted == optionHandIsPointedTo("left")) {
 					float curTime = Time.time;
 					if (curTime - raiseTime > raiseTimeDuration) {
 						NextState = MenuState.OptionSelected;
@@ -130,9 +173,7 @@ public class GenerateMenu : MonoBehaviour {
 			break;
 		case MenuState.RightHandRaised:
 			if (isSkeletonPresent()) {
-				if (isHandRaised("right")) {
-					rightOptionHighlighted = true;
-					leftOptionHighlighted = false;
+				if (optionHighlighted == optionHandIsPointedTo("right")) {
 					float curTime = Time.time;
 					if (curTime - raiseTime > raiseTimeDuration) {
 						NextState = MenuState.OptionSelected;
@@ -156,10 +197,12 @@ public class GenerateMenu : MonoBehaviour {
 			}
 			break;
 		case MenuState.PerformSceneChange:
-			if (rightOptionHighlighted) {
-				Application.LoadLevel(2);
-			} else if (leftOptionHighlighted) {
+			FallingFacesInfoScript info = (FallingFacesInfoScript)FindObjectOfType(typeof(FallingFacesInfoScript));
+			info.LevelSelected = optionHighlighted;
+			if (optionHighlighted >= 0 && optionHighlighted < 3) {
 				Application.LoadLevel(1);
+			} else if (optionHighlighted == 3) {
+				Application.LoadLevel(2);
 			} else {
 				NextState = MenuState.WaitForPresence;	
 			}
@@ -169,9 +212,10 @@ public class GenerateMenu : MonoBehaviour {
 	}
 	
 	void OnGUI() {
-//		GUI.Box (new Rect (100,100,200,50), "Falling Faces");
-//		GUI.Box (new Rect (Screen.width - 200-100,100,200,50), "Hello Park");
 		for (int i=0; i < sizes.Length; i++) {
+			if (anglesOfLights[i] == 0) {
+				anglesOfLights[i] = angleOfMenuOption(i);
+			}
 			Vector3 position = mainCamera.WorldToScreenPoint(lights[i].transform.position);
 			float width = sizes[i].x;
 			float height = sizes[i].y;
@@ -191,33 +235,20 @@ public class GenerateMenu : MonoBehaviour {
 		case MenuState.WaitForHandRaise:
 			break;
 		case MenuState.LeftHandRaised:
-			//statusMessage = "Keep Holding!";
 			statusMessage = "Hold for " + (int)(raiseTimeDuration - (Time.time - raiseTime));
 			break;
 		case MenuState.RightHandRaised:
-			statusMessage = "Keep Holding";
 			statusMessage = "Hold for " + (int)(raiseTimeDuration - (Time.time - raiseTime));
 			break;
 		case MenuState.OptionSelected:
 			statusMessage = "Selection Made!";
-			if (rightOptionHighlighted) {
-				lights[1].light.color = Color.red;	
-			} else if (leftOptionHighlighted) {
-				lights[0].light.color = Color.red;	
-			}
+			lights[optionHighlighted].light.color = Color.red;
 			break;
 		}
 		
-		// update the lights
-		if (rightOptionHighlighted) {
-			lights[1].active = true;	
-		} else {
-			lights[1].active = false;	
-		}
-		if (leftOptionHighlighted) {
-			lights[0].active = true;	
-		} else {
-			lights[0].active = false;	
+		for (int i = 0; i < lights.Length; i++) {
+			if (i == optionHighlighted) lights[i].active = true;
+			else lights[i].active = false;
 		}
 		int labelWidth = 500;
 		int labelHeight = 100;
