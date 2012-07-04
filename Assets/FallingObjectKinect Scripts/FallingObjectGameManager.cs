@@ -10,7 +10,15 @@ public class FallingObjectGameManager : MonoBehaviour {
 	public CalibratedNodeRoot skeletonRoot;
 	public Texture2D placeHolderTexture;
 	public string targetTag;
-	public Texture2D facePicture;
+	
+	// parameters dependent on level
+	private int level;
+	public Texture2D promptDegreePicture;
+	public Texture2D[] promptEmotionPictures;	// order should be happy, sad, angry, surprised, scared, disgusted
+	private Texture2D promptPicture;
+	private string promptText;
+	private ChoiceFallingObjectSpawner.Emotion targetEmotion;	// only relevant for level 1
+	private int targetDegree;	// only relevant for level 2, set to either 1 (most extreme) or -1 (least extreme)
 	#endregion
 	
 	#region state machine parameters
@@ -72,8 +80,8 @@ public class FallingObjectGameManager : MonoBehaviour {
 	#region state machine actions
 	void startPromptTimer() {
 		promptTime = Time.time;
-		flashBox.Message = "Burst the Faces!";
-		flashBox.Image = facePicture;
+		flashBox.Message = promptText;
+		flashBox.Image = promptPicture;
 		flashBox.Duration = promptDuration;
 		flashBox.Center = new Vector2(Screen.width/2, 200);
 		flashBox.WidthHeight = new Vector2(400, 300);
@@ -105,6 +113,28 @@ public class FallingObjectGameManager : MonoBehaviour {
 		numCorrect = 0;
 		numIncorrect = 0;
 		collisionDetected = false;
+		
+		switch (level) {
+		case 0:
+			promptText = "Burst Faces!";
+			promptPicture = promptEmotionPictures[level];
+			break;
+		case 1:
+			targetEmotion = objectSpawner.pickRandomEmotion();
+			promptText = "Burst " + targetEmotion + " Faces!";
+			promptPicture = promptEmotionPictures[(int)targetEmotion];
+			break;
+		case 2:
+			if (Random.Range (0f,1f) < 0.5) {
+				targetDegree = -1;
+				promptText = "Less Intense Faces!";
+			} else {
+				targetDegree = 1;
+				promptText = "More Intense Faces!";
+			}
+			promptPicture = promptDegreePicture;
+			break;
+		}
 	}
 	#endregion
 	
@@ -132,9 +162,15 @@ public class FallingObjectGameManager : MonoBehaviour {
 	void Start () {
 		CurrentState = GameState.WaitForPresence;
 		skeletonRoot.ConstrainZMovement = true;
-		resetState();
 		FallingFacesInfoScript info = (FallingFacesInfoScript)FindObjectOfType(typeof(FallingFacesInfoScript));
-		Debug.Log("Level: " + info.LevelSelected);
+		if (info) {
+			Debug.Log("Level: " + info.LevelSelected);
+			level = info.LevelSelected;
+		} else {
+			level = 0;
+			Debug.Log ("Using default level 0!");
+		}
+		resetState();
 	}
 	
 	// Update is called once per frame
@@ -175,7 +211,13 @@ public class FallingObjectGameManager : MonoBehaviour {
 			NextState = GameState.SpawnFallingObjects;
 			break;
 		case GameState.SpawnFallingObjects:
-			currentFallingObjects = objectSpawner.spawnTwoProblem();
+			if (level == 0) {
+				currentFallingObjects = objectSpawner.spawnOneFaceOneSphere();
+			} else if (level == 1) {
+				currentFallingObjects = objectSpawner.spawnTwoEmotions(targetEmotion);
+			} else {
+				currentFallingObjects = objectSpawner.spawnTwoDegrees(targetDegree);
+			}
 			NextState = GameState.WaitForChoice;
 			break;
 		case GameState.WaitForChoice:

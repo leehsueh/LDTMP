@@ -24,7 +24,7 @@ public class FallingObjectGameStatus : MonoBehaviour {
 	public void setup() {
 		statusText.GetComponent<LabelFlash>().updateText("Stand still...");
 		statusText.GetComponent<LabelFlash>().show(3f);
-		twoObjectSpawner.spawnTwoProblem();
+		twoObjectSpawner.spawnOneFaceOneSphere();
 	}
 	
 	// Use this for initialization
