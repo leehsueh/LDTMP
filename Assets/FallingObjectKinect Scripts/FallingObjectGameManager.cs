@@ -14,7 +14,8 @@ public class FallingObjectGameManager : MonoBehaviour {
 	// parameters dependent on level
 	private int level;
 	public Texture2D promptDegreePicture;
-	public Texture2D[] promptEmotionPictures;	// order should be happy, sad, angry, surprised, scared, disgusted
+	public Texture2D[] promptEmotionPictures;	// order should be happy, sad, angry, scared, disgusted
+	public Texture2D[] bwPromptEmotionPictures;
 	private Texture2D promptPicture;
 	private string promptText;
 	private ChoiceFallingObjectSpawner.Emotion targetEmotion;	// only relevant for level 1
@@ -125,14 +126,16 @@ public class FallingObjectGameManager : MonoBehaviour {
 			promptPicture = promptEmotionPictures[(int)targetEmotion];
 			break;
 		case 2:
-			if (Random.Range (0f,1f) < 0.5) {
-				targetDegree = -1;
-				promptText = "Less Intense Faces!";
-			} else {
-				targetDegree = 1;
-				promptText = "More Intense Faces!";
-			}
-			promptPicture = promptDegreePicture;
+//			if (Random.Range (0f,1f) < 0.5) {
+//				targetDegree = -1;
+//				promptText = "Less Intense Faces!";
+//			} else {
+//				targetDegree = 1;
+//				promptText = "More Intense Faces!";
+//			}
+			targetEmotion = objectSpawner.pickRandomEmotion();
+			promptText = "Burst " + targetEmotion + " Faces!";
+			promptPicture = promptEmotionPictures[(int)targetEmotion];
 			break;
 		}
 	}
@@ -211,12 +214,14 @@ public class FallingObjectGameManager : MonoBehaviour {
 			NextState = GameState.SpawnFallingObjects;
 			break;
 		case GameState.SpawnFallingObjects:
+			collisionDetected = false;	// safety measure
 			if (level == 0) {
 				currentFallingObjects = objectSpawner.spawnOneFaceOneSphere();
 			} else if (level == 1) {
-				currentFallingObjects = objectSpawner.spawnTwoEmotions(targetEmotion);
+				currentFallingObjects = objectSpawner.spawnTwoEmotions(targetEmotion, false);
 			} else {
-				currentFallingObjects = objectSpawner.spawnTwoDegrees(targetDegree);
+				// currentFallingObjects = objectSpawner.spawnTwoDegrees(targetDegree);
+				currentFallingObjects = objectSpawner.spawnTwoEmotions(targetEmotion, true);
 			}
 			NextState = GameState.WaitForChoice;
 			break;
@@ -255,8 +260,16 @@ public class FallingObjectGameManager : MonoBehaviour {
 			if (goalNumberMet() || maxIncorrectMet()) {
 				NextState = GameState.GameOver;
 				startGameOverMessageTimer();
-				if (goalNumberMet()) flashMessage("Great! You burst " + goalNumberCorrect + " faces!", gameOverMessageDuration);
-				else flashMessage("Sorry, you missed " + maxNumberIncorrect + " times.", gameOverMessageDuration);
+				int totalTries = numCorrect + numIncorrect;
+				string message;
+				if (level >= 1) {
+					message= "Score for " + targetEmotion + ": " + numCorrect + "/" + totalTries;
+				} else {
+					message = "Score: " + numCorrect + "/" + totalTries;
+				}
+				flashMessage(message, gameOverMessageDuration);
+//				if (goalNumberMet()) flashMessage("Great! You burst " + goalNumberCorrect + " faces!", gameOverMessageDuration);
+//				else flashMessage("Sorry, you missed " + maxNumberIncorrect + " times.", gameOverMessageDuration);
 			} else {
 				NextState = GameState.WaitForObjectsDisappear;	
 			}

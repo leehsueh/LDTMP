@@ -1,19 +1,21 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\FallingObjectKinect Scripts\FallingObjectGameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\WavingGame\WavingGameManager.cs">
     <Files>
-      <File FileName="Assets\FallingObjectKinect Scripts\FallingObjectGameManager.cs" Line="133" Column="19" />
-      <File FileName="Assets\FallingObjectKinect Scripts\FallingFacesInfoScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\FallingObjectKinect Scripts\ChoiceFallingObjectSpawner.cs" Line="129" Column="38" />
-      <File FileName="Assets\FallingObjectKinect Scripts\FallingObjectKinectController.cs" Line="39" Column="3" />
+      <File FileName="Assets\Labels\LabelFlash.cs" Line="15" Column="55" />
+      <File FileName="Assets\WavingGame\WavingGameManager.cs" Line="227" Column="33" />
+      <File FileName="Assets\WavingGame\BoxFlash.cs" Line="1" Column="1" />
+      <File FileName="Assets\WavingGame\WalkingCharacterSpawner.cs" Line="93" Column="47" />
+      <File FileName="Assets\WavingGame\WavingGameCharacterController.cs" Line="22" Column="5" />
+      <File FileName="Assets\WavingGame\WalkingCharacterController.cs" Line="30" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="C:\Users\leehsueh\Dropbox\stanford\mp\kinect unity\AutismGame\Assets\Player\Gestures\HandWaveGesture.cs" line="79" />
       <Breakpoint file="C:\Users\leehsueh\Development\AutismGame\Assets\FallingObject\FallingObjectController.cs" line="33" />
-      <Breakpoint file="C:\Users\leehsueh\Development\AutismGame\Assets\WavingGame\WavingGameManager.cs" line="58" />
-      <Breakpoint file="C:\Users\leehsueh\Development\AutismGame\Assets\FallingObjectKinect Scripts\FallingObjectGameManager.cs" line="221" />
+      <Breakpoint file="C:\Users\leehsueh\Development\AutismGame\Assets\FallingObjectKinect Scripts\FallingObjectGameManager.cs" line="226" />
+      <Breakpoint file="C:\Users\leehsueh\Development\AutismGame\Assets\WavingGame\WavingGameManager.cs" line="59" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

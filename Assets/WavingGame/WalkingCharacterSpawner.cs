@@ -89,7 +89,7 @@ public class WalkingCharacterSpawner : MonoBehaviour {
 			float yStart = Random.Range(rangeYOrigin.x, rangeYOrigin.y);
 			float zStart = Random.Range (rangeZOrigin.x, rangeZOrigin.y);
 			Vector3 position = new Vector3(xStart, yStart, zStart);
-			GameObject obj = (GameObject)Instantiate(objectPrefab, position, objectPrefab.transform.rotation);
+			GameObject obj = (GameObject)Instantiate(objectPrefab, position, objectPrefab.transform.rotation);			
 			WavingGameCharacterController walker = obj.GetComponent<WavingGameCharacterController>();
 			walker.Speed = DefaultSpeed;
 			walker.feedbackMotionName = correctReactionAnimation;

@@ -27,7 +27,8 @@ public class WalkingCharacterController : MonoBehaviour {
 	
 	// Update is called once per frame
 	public void Update () {
-		gameObject.transform.position += speedMultiplier * Time.deltaTime * directionVector;
+		gameObject.transform.Translate(directionVector * Time.deltaTime * speedMultiplier);
+		//gameObject.transform.position += speedMultiplier * Time.deltaTime * directionVector;
 		if (feedbackTriggerMet() && !didGiveFeedback) {
 			giveFeedback();
 		} else {
@@ -42,7 +43,8 @@ public class WalkingCharacterController : MonoBehaviour {
 		}
 		// check if off screen
 		if (gameObject.transform.position.z < offscreenZ) {
-			gameObject.active = false;	
+			gameObject.active = false;
+			Destroy(this.gameObject);
 		}
 	}
 	

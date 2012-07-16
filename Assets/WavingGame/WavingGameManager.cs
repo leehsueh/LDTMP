@@ -9,6 +9,7 @@ public class WavingGameManager : MotionSandboxManager {
 	public CalibratedNodeRoot skeletonRoot;
 	public LabelFlash flashLabel;
 	public BoxFlash flashBox;
+	public BoxFlash flashBoxStatus;
 	private float probabilityOfTarget = 0.3f;
 	public float defaultSpeed;
 	public float fasterSpeed;
@@ -83,6 +84,7 @@ public class WavingGameManager : MotionSandboxManager {
 		flashBox.Center = new Vector2(Screen.width/2, 200);
 		flashBox.WidthHeight = new Vector2(400, 300);
 		flashBox.show();
+		
 	}
 	void startVictoryMessageTimer() {
 		victoryMessageTime = Time.time;	
@@ -95,8 +97,12 @@ public class WavingGameManager : MotionSandboxManager {
 	}
 	void flashMessage(string message, float duration) {
 		//TODO: implement this
-		flashLabel.updateText(message);
-		flashLabel.show(duration);
+//		flashLabel.updateText(message);
+//		flashLabel.show(duration);
+		flashBoxStatus.gameObject.active = true;
+		flashBoxStatus.Message = message;
+		flashBoxStatus.Duration = duration;
+		flashBoxStatus.show();
 	}
 	void killExistingGameAndReset() {
 		//TODO: implement this
@@ -139,6 +145,12 @@ public class WavingGameManager : MotionSandboxManager {
 		if (skeletonRoot == null) {
 			skeletonRoot = (CalibratedNodeRoot)FindObjectOfType(typeof(CalibratedNodeRoot));
 		}
+		
+		flashBoxStatus.Image = null;
+		flashBoxStatus.Center = new Vector2(Screen.width/2, 130);
+		flashBoxStatus.Duration = promptDuration;
+		flashBoxStatus.WidthHeight = new Vector2(Screen.width/1.5f, 100); 
+		flashBoxStatus.gameObject.active = false;
 	}
 	
 	// Update is called once per frame
@@ -212,6 +224,7 @@ public class WavingGameManager : MotionSandboxManager {
 					} else {
 						NextState = GameState.Spawning;
 					}
+					mMainWalker.Speed = 2*fasterSpeed;
 					characterSpawner.removeWalker(mMainWalker);
 					print ("Spawning from WaitForWave");
 				} else {
@@ -223,7 +236,7 @@ public class WavingGameManager : MotionSandboxManager {
 			}
 			break;
 		case GameState.WaveMissed:
-			flashMessage("Target Missed!", 2);
+			flashMessage("You missed " + characterSpawner.TargetName + "!", 2f);
 			characterSpawner.removeWalker(mMainWalker);
 			NextState = GameState.Spawning;
 			print ("Spawning from WaveMissed");
@@ -280,7 +293,8 @@ public class WavingGameManager : MotionSandboxManager {
 		}
 		CurrentState = NextState;
 	}
-
+	
+	Texture2D backgroundColor;
 	void OnGUI() {
 		string statusMessage;
 		if (showStates) statusMessage = CurrentState.ToString();
@@ -323,10 +337,28 @@ public class WavingGameManager : MotionSandboxManager {
 		
 		int labelWidth = 500;
 		int labelHeight = 100;
-		GUIStyle style = new GUIStyle();
-		style.fontSize = 36;
-		style.alignment = TextAnchor.MiddleCenter;
-		style.normal.textColor = Color.black;
-		GUI.Box(new Rect(Screen.width/2 - labelWidth/2, 100, labelWidth, labelHeight), statusMessage, style);
+		if (backgroundColor == null) {
+			Vector2 widthHeight = new Vector2(labelWidth, labelHeight);
+			backgroundColor = new Texture2D((int)widthHeight.x, (int)widthHeight.y);
+			for (int y = 0; y < backgroundColor.height; ++y)
+	        {
+	            for (int x = 0; x < backgroundColor.width; ++x)
+	            {
+	                //float r = Random.value;
+					float r = 0.95f;
+	                Color color = new Color(r, r, r, 0.8f);
+	                backgroundColor.SetPixel(x, y, color);
+	            }
+	        }
+	        backgroundColor.Apply();
+		}
+		if (statusMessage != null && !statusMessage.Equals("")) {
+			GUIStyle style = new GUIStyle();
+			style.fontSize = 36;
+			style.alignment = TextAnchor.MiddleCenter;
+			style.normal.background = backgroundColor;
+			style.normal.textColor = Color.black;
+			GUI.Box(new Rect(Screen.width/2 - labelWidth/2, 100, labelWidth, labelHeight), statusMessage, style);
+		}
 	}
 }
